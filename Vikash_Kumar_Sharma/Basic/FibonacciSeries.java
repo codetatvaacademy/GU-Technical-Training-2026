@@ -13,7 +13,7 @@ public class FibonacciSeries {
             return b;
         }
     public static void main(String[] args) {
-        System.out.println("Fibonacci series is "+fib(10)+"of "+fib);
+        System.out.println("Fibonacci series is "+fib(10));
 
     }
 }
