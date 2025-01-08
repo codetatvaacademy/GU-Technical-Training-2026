@@ -1,0 +1,117 @@
+1. WAP to take input 2 numbers from the user and print the sum of the numbers.
+
+2. WAP to take input 1 number from the user and print its square and cube.
+
+3. WAP to calculate and print area of circle and circumference of circle.
+
+4. WAP to take input rupees from the user and convert it into paise.
+
+5. WAP to take input days from the user and convert it into years, months, and remaining days.
+
+6. WAP to take input 3 digit numbers from the user and print sum of 1 and 3 digit.
+
+7. WAP to take input 3 digit numbers from the user and print the square of the middle digit.
+
+8. WAP to take input 4 digit numbers from the user and print its all digits.
+
+9. WAP to check whether a number is even or odd.
+
+10. WAP to check whether the number is positive, negative or zero.
+
+11. WAP to take input two numbers from the user and print the largest of them.
+
+12. WAP to take input 2 numbers from the user and print their difference.
+
+13. WAP to take input 3 numbers from the user and print the largest number among them.
+using nested if 
+using AND operator
+
+14. WAP to take input rate & quantity and calculate the amount. Finally print net amount to be paid after allowing 15% discount if amount exceeds 2000 rs.
+
+15. WAP to take input 3 numbers and print the 2nd largest number among them.
+
+16. WAP to take input a number (range 1 to 7) from the user and print the corresponding week.
+using if else 
+using switch 
+
+17. WAP to input year from user and check whether it is a leap year or not.
+
+18. WAP to take input 3 numbers from the user and print the numbers in the descending order.
+
+19. WAP to take input income from the user and calculate the amount of tax to be paid as per rules.
+Less or equal to 10,000 -> no tax
+Greater than 10,000 and less or equal to 25,000 -> 10% of income above 10,000
+Greater than 25,000 and less or equal to 50,000 -> 2500 + 20% income above 25,000
+Greater than 50,000 -> 5000 + 30% of income above 50,000
+
+20. WAP to perform arithmetic operations as per user's choice.
+
+21. WAP to calculate the area of rectangle, circle and triangle as per user's choice.
+
+22. WAP to input a character from user and check whether it is an alphabets, digits, or special symbols.
+
+23. WAP to input a character from user and check whether it is uppercase and lowercase.
+
+24. WAP to check whether a character given by user is a vowel or consonant.
+
+25. WAP to convert a character into its toggle case.
+
+26. WAP to input a lower limit and an upper limit from user and print all the numbers in between the given limits.
+
+27. WAP to input a lower limit and an upper limit from user and print all the even numbers in between the given limits.
+
+28. WAP to input a number from user and print its factorial.
+
+29. WAP to input a number from user and print its table.
+
+30. WAP to print the sum of the divisors of a number given by user.
+
+31. WAP to check whether a number is perfect or not.
+
+32. WAP to print the reverse of a number given by user.
+
+33. WAP to take input a number from the user and check whether it is palindrome.
+
+34. WAP to take input a number from the user and check whether it is armstrong.
+
+35. WAP to take input a number from user and print in the form of series:
+1, 3, 6, 10, 15, ... nth term
+1, 11, 111, 1111, ... nth term
+1, 12, 123, 1234, … nth term
+0, 7, 26, 63, … nth term
+0, 1, 1, 2, 3, 5, 8, … nth term
+0, 1, 3, 7, 15, … nth term
+x - x ^ 2 + x ^ 3 - x ^ 4 + x ^ 5 … nth term (do sum here also)
+
+36. WAP to calculate the average of even and odd numbers given by user until user press -1.
+
+37. Define a class called MovieMagic with the following description :-
+Instance variables :-
+int year - to store the year of release of movie.
+String title - to store the title of the movie.
+float rating - to store the popularity rating of the movie.
+Member methods :-
+MovieMagic() - default constructor to initialise data members.
+void accept() - to input and store year, title and rating.
+void display() - to display the title of a movie and a message based on the rating as per the table.
+0.0 to 2.0 - Flop
+2.1 to 3.4 - Semi-hit
+3.5 to 4.5 - Hit
+4.6 to 5.0 - Super Hit
+Write a main() method to create an object of the class and call the above member methods.
+
+38. Define a class called ParkingLot with the following description :-
+Instance variables :-
+int vehicleNumber - to store vehicle number.
+double hours - to storee the number of hours the vehicle is parked.
+double bill - to store the bill amount.
+Member methods :-
+ParkingLot - to initialise data members.
+void input() - to input and store the vehicleNumber and hours.
+void calculate() - to compute the parking charge at rate of 3 rs for the first hour or part thereof and 1.5 rs for each additional hour.
+void display() - to display details.
+Write a main() method to create an object of the class and call the above methods.
+
+39. WAP to input a string from the user and count the number of alphabets, digits & special symbols in the string.
+
+40. WAP to convert a string into PIGLATIN form.
