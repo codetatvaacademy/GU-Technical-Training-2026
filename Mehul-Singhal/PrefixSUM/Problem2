@@ -1,0 +1,30 @@
+import java.util.Arrays;
+public class problem2 {
+    public static int[] calculateSeats(int n, int[][] bookings) {
+        int[] seats = new int[n + 1]; 
+        for (int[] booking : bookings) {
+            int start = booking[0];
+            int end = booking[1];   
+            int seatsi = booking[2]; 
+            seats[start - 1] += seatsi; 
+            if (end < n) {
+                seats[end] -= seatsi; 
+            }
+        }                           //TIME COMPLEXITY = O(n)
+                                    //SPACE COMPLEXITY =O(1)
+        int[] result = new int[n];
+        int Sum = 0;
+        for (int i = 0; i < n; i++) {
+            Sum += seats[i];
+            result[i] = Sum;
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        int n = 5; 
+        int[][] bookings ={{1,2,10},{2,3,20},{2,5,25}}; //INPUT
+        int[] result = calculateSeats(n, bookings);
+        System.out.println("Total seats reserved for each flight: " + Arrays.toString(result));
+    }
+}
+
