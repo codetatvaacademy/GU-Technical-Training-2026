@@ -15,17 +15,13 @@ public class Problem2 {
         int hours = sc.nextInt();
         sc.close();
 
-        int totalBananas = 0;
+        long end = 0;
         for(int i:bananas){
-            totalBananas+=i;
-            
+            end+=i;
         }
-
-        int start = 0;
-        int end = totalBananas;
-
+        long start = 1;
         while(start<=end){
-            int mid = (start+end)/2;
+            long mid = (start+end)/2;
             if(isPossible(bananas, mid, hours)){
                 end = mid-1;
             }
@@ -36,12 +32,9 @@ public class Problem2 {
 
         System.out.println(start);
     }
-    private static boolean isPossible(int[] bananas, int mid, int hours){
+    private static boolean isPossible(int[] bananas, long mid, int hours){
         for(int i=0; i<bananas.length; i++){
-            int hrs = (bananas[i])/mid;
-            if(bananas[i]%mid>0){
-                hrs++;
-            }
+            long hrs = (bananas[i]+mid-1)/mid;
             hours-=hrs;
         }
         return hours>=0;

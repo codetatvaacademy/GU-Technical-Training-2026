@@ -1,7 +1,6 @@
 //  time complexity -> O(nlogn)
 // space complexity -> O(1)
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Problem3 {
@@ -17,47 +16,32 @@ public class Problem3 {
         int cars = sc.nextInt();
         sc.close();
 
-        int start = 1; 
-        int end = cars;
-        Arrays.sort(ranks);
-
-        int ans = Integer.MAX_VALUE;
-        while(start<=end){
-            int mid = (start+end)/2;
-            int time = timeTaken(ranks, mid, cars);
-            if(time!=-1){
-                start = mid+1;
-                ans = Math.min(ans, time);
-            }
-            else{
-                end = mid-1;
+        long start = 1;
+        int min = 100;
+        for(int r:ranks){
+            min = (min>r)?r:min;
+        }
+        long end = (long)cars*cars*min;
+        while (start <= end) {
+            long mid = (start + end) / 2;
+            if (isPossible(ranks, mid, cars)) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
             }
         }
-
-        System.out.println(ans);
+        
+        System.out.println(start);
     }
 
-    private static int timeTaken(int[] ranks, int mid, int cars) {
-        int count = 0;
-        int i = ranks.length - 1;
-        int max = 0;
-        while (cars > 0) {
-            count++;
-            cars -= mid;
-            
-            int time = ranks[i] * mid * mid;
-            if (max < time) {
-                max = time;
-            }
-            i--;
-            if (cars < mid || i == 0) {
-                mid = cars;
+    private static boolean isPossible(int[] ranks, long mid, int cars) {
+        long sum = 0;
+        for(int i:ranks) {
+            sum+=Math.sqrt(mid/i);
+            if(sum>=cars){
+                return true;
             }
         }
-        if (count == ranks.length) {
-            return max;
-        } else {
-            return -1;
-        }
+        return sum>=cars;
     }
 }

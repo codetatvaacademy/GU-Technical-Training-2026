@@ -17,21 +17,18 @@ public class Problem1 {
         sc.close();
 
         int startIdx = findFirstOccurrence(inputArr, 0, n-1, target);
-        int countOccurrence = 0;
+        int lastIdx = findLastOccurrence(inputArr, 0, n-1, target);
 
         if(startIdx==-1){
             System.out.println("0");
         }
         else{
-            while(startIdx<inputArr.length && inputArr[startIdx]==target){
-                countOccurrence++;
-                startIdx++;
-            }
-            System.out.println(countOccurrence);
+            System.out.println(lastIdx-startIdx+1);
         }
     }
 
     private static int findFirstOccurrence(int[] inputArr, int start, int end, int target){
+        int idx = -1;
         while(start<=end){
             int mid = (start+end)/2;
             if(inputArr[mid]>=target){
@@ -40,7 +37,28 @@ public class Problem1 {
             else{
                 start=mid+1;
             }
+            if(inputArr[mid]==target){
+                idx = mid;
+            }
         }
-        return start<inputArr.length?start:-1;
+        return idx;
     }
+
+    private static int findLastOccurrence(int[] inputArr, int start, int end, int target){
+        int idx = -1;
+        while(start<=end){
+            int mid = (start+end)/2;
+            if(inputArr[mid]>target){
+                end = mid-1;
+            }
+            else{
+                start=mid+1;
+            }
+            if(inputArr[mid]==target){
+                idx = mid;
+            }
+        }
+        return idx;
+    }
+    
 }
