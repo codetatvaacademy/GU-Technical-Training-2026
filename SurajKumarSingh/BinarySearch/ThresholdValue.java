@@ -1,10 +1,10 @@
 //Leetcode - 1283
 
 package BinarySearch;
-
 import java.util.Scanner;
 
 public class ThresholdValue {
+
     private int countsum(int [] nums, int divisor){
         int sum = 0;
         for(int i = 0; i< nums.length; i++){

@@ -5,7 +5,7 @@ package BinarySearch;
 import java.util.Scanner;
 
 public class BallInBag {
-    private boolean ispossible(int [] nums, int ans, int operation){
+    public boolean ispossible(int [] nums, int ans, int operation){
         for(int i = 0; i < nums.length; i++){
             operation -= (nums[i] -1) / ans;
             if(operation < 0){
