@@ -23,7 +23,6 @@ public class NumMatrix {
     }
 
     public int sumRegion(int row1, int col1, int row2, int col2) {
-        int sum = 0;
         int upper = 0, lower = 0, diagonal = 0;
         if (row1 > 0) {
             upper = matrix[row1 - 1][col2];
