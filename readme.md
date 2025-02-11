@@ -146,3 +146,6 @@ If you face any issues, feel free to reach out to the repository maintainers for
 ---
 
 Thank you for contributing to **GU-Technical-Training-2026**! Together, we can build something amazing.
+
+
+Ashish Chauhan resume link - https://pdflink.to/df72acb0/
