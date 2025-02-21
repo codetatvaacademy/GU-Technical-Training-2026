@@ -3,7 +3,7 @@
 using namespace std;
 
 int seeSaw(vector<int> &nums){
-    int n = nums.size();
+    int n = nums.size();//length of array
     vector<int> leftsum;
     vector<int> totalSum;
 
