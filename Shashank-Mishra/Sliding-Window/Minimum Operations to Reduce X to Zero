@@ -1,0 +1,36 @@
+class Solution {
+    public int minOperations(int[] nums, int x) {
+        int totalSum=0;
+        int remainingSum=0;
+        int start =0;
+        int end=0;
+        int maxLen=0;
+        int sum=0;
+
+        for(int i =0;i<nums.length;i++){
+            totalSum += nums[i];
+        }
+        remainingSum= totalSum-x;
+        if(totalSum==x){
+            return nums.length;
+        }
+        while(end<nums.length){
+            sum +=nums[end];
+            
+            while(sum > remainingSum && start <= end){
+                sum -=nums[start];
+                start++;
+            }
+            if(sum == remainingSum){
+                maxLen= Math.max(maxLen,(end-start)+1);
+            }
+            end++;
+        }
+        if(maxLen==0){
+            return -1;
+        }
+        else{
+            return nums.length-maxLen;
+        }
+    }
+}
