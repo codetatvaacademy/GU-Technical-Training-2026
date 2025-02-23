@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+
+import 'SortingAlgorithm/merge_sort.dart';
+import 'SortingAlgorithm/selection_sort.dart';
 import 'bar_graph.dart';
 import 'SortingAlgorithm/bubble_sort.dart';
 import 'SortingAlgorithm/insertion_sort.dart';
 import 'SortingAlgorithm/quick_sort.dart';
-import 'SortingAlgorithm/merge_sort.dart';
-import 'SortingAlgorithm/selection_sort.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const BarGraphScreen(),
+        debugShowCheckedModeBanner: false,
+        home: BarGraphScreen()
     );
   }
 }
@@ -65,15 +65,19 @@ class _BarGraphScreenState extends State<BarGraphScreen> {
       case "Bubble Sort":
         await BubbleSort.sort(data, updateGraph);
         break;
-      case "Insertion Sort":
-        await InsertionSort.sort(data, updateGraph);
-        break;
-      case "Quick Sort":
-        await QuickSort.sort(data, updateGraph);
-        break;
+
       case "Selection Sort":
         await SelectionSort.sort(data, updateGraph);
         break;
+
+      case "Insertion Sort":
+        await InsertionSort.sort(data, updateGraph);
+        break;
+
+      case "Quick Sort":
+        await QuickSort.sort(data, updateGraph);
+        break;
+
       case "Merge Sort":
         await MergeSort.sort(data, updateGraph);
         break;
@@ -94,7 +98,15 @@ class _BarGraphScreenState extends State<BarGraphScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Center(child: const Text("Sorting Algorithm Visualizer", style: TextStyle(fontSize: 25, color: Colors.lightBlue, fontWeight: FontWeight.bold, ),))),
+      appBar: AppBar(title: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("Sort", style: TextStyle(fontSize: 25, color: Colors.blueAccent, fontWeight: FontWeight.bold, ),),
+            const Text("ify", style: TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold, ),),
+          ],
+        ),
+      )),
       body: Column(
         children: [
           const SizedBox(height: 20),
@@ -119,11 +131,10 @@ class _BarGraphScreenState extends State<BarGraphScreen> {
                   )
                 ]
             ),
-            child: DropdownButtonFormField<String>(
-              decoration: InputDecoration(border: InputBorder.none),
-              isExpanded: true,
+            child: DropdownButton<String>(
+              underline: Container(),
               value: selectedAlgorithm,
-              items: ["Bubble Sort", "Insertion Sort", "Quick Sort", "Merge Sort", "Selection Sort"]
+              items: ["Bubble Sort", "Insertion Sort", "Selection Sort", "Quick Sort", "Merge Sort"]
                   .map((algo) => DropdownMenuItem(value: algo, child: Text(algo)))
                   .toList(),
               onChanged: (value) {
