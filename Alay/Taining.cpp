@@ -1,255 +1,259 @@
+#include <unordered_set>
 #include <iostream>
 #include <vector>
+#include <numeric>
+
 using namespace std;
 
-//1>
-//Overall codes time complexity is O(logn)
-//Overall codes space complexity is O(1)
-int findFirstOccurrence(const vector<int>& arr, int target) {
-    
-    int low = 0, high = arr.size() - 1, result = -1;
-    
-    while (low <= high) { //using binary search O(logn)
-    
-        int mid = low + (high - low) / 2;
-    
-        if (arr[mid] == target) {
-    
-            result = mid;
-    
-            high = mid - 1;
-    
-        } else if (arr[mid] < target) {
-    
-            low = mid + 1;
-    
-        } else {
-    
-            high = mid - 1;
-    
+// // Q1
+// // Time complexity: O(n logn)
+// // Space complexity: O(1)
+
+// int minDifferenceAfterReplacement(int N, int K, vector<int>& weights) {
+
+//     sort(weights.begin(), weights.end());
+
+//     int result = weights[N - 1] - weights[0];
+
+//     for (int i = 0; i <= K; ++i) {
+
+//         int min_val = (i < N) ? weights[i] : INT_MAX;
+
+//         int max_val = (N - K + i - 1 >= 0) ? weights[N - K + i - 1] : INT_MIN;
+
+//         result = min(result, max_val - min_val);
+
+//     }
+
+//     return result;
+// }
+
+
+// int main() {
+
+//     int N, K;
+
+//     cin >> N >> K;
+
+//     vector<int> weights(N);
+
+//     for (int i = 0; i < N; ++i) {
+
+//         cin >> weights[i];
+
+//     }
+
+//     cout << minDifferenceAfterReplacement(N, K, weights) << endl;
+
+//     return 0;
+
+// }
+
+// // Q2
+// // Time complexity O(n)
+// // Space complexity O(1)
+
+bool isValidWindow(const unordered_map<char, int>& vowelCount) {
+
+    string vowels = "aeiou";
+
+    for (int i = 0; i < vowels.size(); ++i) {
+
+        if (vowelCount.find(vowels[i]) == vowelCount.end()) {
+
+            return false;
+
         }
-    
+
     }
-    
-    return result;
+
+    return true;
 
 }
 
-int findLastOccurrence(const vector<int>& arr, int target) {
-    
-    int low = 0, high = arr.size() - 1, result = -1;
-    
-    while (low <= high) {   //using binary search O(logn)
-    
-        int mid = low + (high - low) / 2;
-    
-        if (arr[mid] == target) {
-    
-            result = mid;
-    
-            low = mid + 1;
-    
-        } else if (arr[mid] < target) {
-    
-            low = mid + 1;
-    
-        } else {
-    
-            high = mid - 1;
-    
+int longestBeautifulSubstring(const string& word) {
+
+    int n = word.size();
+
+    int maxLength = 0;
+
+    int left = 0;
+
+    unordered_map<char, int> vowelCount;
+
+    for (int right = 0; right < n; ++right) {
+
+        char current = word[right];
+
+        vowelCount[current]++;
+
+        while (left <= right && (!isValidWindow(vowelCount))) {
+
+            vowelCount[word[left]]--;
+
+            if (vowelCount[word[left]] == 0) {
+
+                vowelCount.erase(word[left]);
+
+            }
+
+            left++;
+
         }
-    
+
+        if (vowelCount.size() == 5) {
+
+            maxLength = max(maxLength, right - left + 1);
+
+        }
+
     }
+
+
+    return maxLength;
     
-    return result;
+}
+
+int main() {
+
+    string word;
+
+    cin >> word;
+
+    cout << longestBeautifulSubstring(word) << endl;
+
+    return 0;
 
 }
 
 
-int countOccurrences(const vector<int>& arr, int target) {
 
-    int first = findFirstOccurrence(arr, target);
-    
-    if (first == -1) return 0;
-    
-    int last = findLastOccurrence(arr, target);
-    
-    return last - first + 1;
+// //Q3
+// //Time complexity O(n log(sum))
+// //Space complexity O(1)
 
+// bool canSplit(vector<int>& nums, int k, int maxSum) {
 
-//     int count = 0;
+//     int count = 1, currentSum = 0;
 
-//     for(int i = 0; i < arr.size(); i++) { //using for loop O(n)
+//     for (int num : nums) {
 
-//         if(arr[i] == target) {
+//         if (currentSum + num > maxSum) {
 
 //             count++;
+
+//             currentSum = num;
+
+//             if (count > k) return false;
+
+//         } else {
+
+//             currentSum += num;
 
 //         }
 
 //     }
 
-//     return count;
+//     return true;
 
-    //return count(arr.begin(), arr.end(), target); //using in built function
+// }
 
-}
+// int splitArray(vector<int>& nums, int k) {
 
-//2>
-//Overall codes time complexity is O(nlogn)
-//Overall codes space complexity is O(1)
-bool canEatAllBananas(const vector<int>& piles, int k, int h) {
+//     int low = *max_element(nums.begin(), nums.end());
 
-    int hours = 0;
+//     int high = accumulate(nums.begin(), nums.end(), 0);
 
-    for (int pile : piles) {    //using for loop O(n)
+//     int result = high;
 
-        hours += (pile + k - 1) / k;
+//     while (low <= high) {
 
-    }
+//         int mid = low + (high - low) / 2;
 
-    return hours <= h;
+//         if (canSplit(nums, k, mid)) {
 
-}
+//             result = mid;
 
-int minEatingSpeed(vector<int>& piles, int h) {
+//             high = mid - 1;
 
-    int left = 1, right = *max_element(piles.begin(), piles.end());
+//         } else {
 
-    while (left < right) {  //using binary search O(logn)
+//             low = mid + 1;
+//         }
 
-        int mid = left + (right - left) / 2;
+//     }
 
-        if (canEatAllBananas(piles, mid, h)) {
+//     return result;
 
-            right = mid;
+// }
 
-        } else {
+// int main() {
 
-            left = mid + 1;
+//     int n, k;
 
-        }
+//     cin >> n >> k;
 
-    }
+//     vector<int> nums(n);
 
-    return left;
+//     for (int i = 0; i < n; ++i) {
+        
+//         cin >> nums[i];
 
-}
+//     }
 
-//3>
-//Overall codes time complexity is O(nlogn)
-//Overall codes space complexity is O(1)
-bool canRepairAllCars(const vector<int>& ranks, int cars, long long time) {
+//     cout << splitArray(nums, k) << endl;
 
-    long long totalCars = 0;
-    
-    for (int rank : ranks) { //using for loop O(n)
-    
-        totalCars += sqrt(time / rank);
-    
-        if (totalCars >= cars) return true;
-    
-    }
-    
-    return totalCars >= cars;
+//     return 0;
 
-}
+// }
 
-long long minTimeToRepairCars(vector<int>& ranks, int cars) {
+// //Q4
+// //Time complexity O(n)
+// // Space complexity O(1)
 
-    long long left = 1, right = *max_element(ranks.begin(), ranks.end()) * cars * cars;
+// int longestSemiRepetitiveSubstring(const string& s) {
 
-    while (left < right) { //using binary search O(logn)
+//     int n = s.size();
 
-        long long mid = left + (right - left) / 2;
-
-        if (canRepairAllCars(ranks, cars, mid)) {
-
-            right = mid;
-
-        } else {
-
-            left = mid + 1;
-
-        }
-
-    }
-
-    return left;
-
-}
+//     int maxLength = 1, left = 0, repeatCount = 0;
 
 
-//Main function
-int main() {
-    //For 1st function
-    int n;
+//     for (int right = 1; right < n; ++right) {
 
-    vector<int> arr;
-    
-    cin >> n;
-    
-    for(int i = 0; i < n; i++) {
-    
-        int x;
-    
-        cin >> x;
-    
-        arr.push_back(x);
-    
-    }
-    
-    int target;
-    
-    cin >> target;
-    
-    cout << countOccurrences(arr, target);
+//         if (s[right] == s[right - 1]) {
 
-    //For 2nd function
-    int n;
+//             repeatCount++;
 
-    vector<int> piles;
+//         }
 
-    cin >> n;
+//         while (repeatCount > 1) {
 
-    for(int i = 0; i < n; i++) {
+//             if (s[left] == s[left + 1]) {
 
-        int x;
+//                 repeatCount--;
 
-        cin >> x;
+//             }
 
-        piles.push_back(x);
+//             left++;
 
-    }
+//         }
 
-    int h;
-    
-    cin >> h;
-    
-    cout << minEatingSpeed(piles, h);
+//         maxLength = max(maxLength, right - left + 1);
 
-    //For 3rd function
-    int n;
+//     }
 
-    vector<int> ranks;
+//     return maxLength;
 
-    cin >> n;
+// }
 
-    for(int i = 0; i < n; i++) {
+// int main() {
 
-        int x;
+//     string s;
 
-        cin >> x;
+//     cin >> s;
 
-        ranks.push_back(x);
+//     cout << longestSemiRepetitiveSubstring(s) << endl;
 
-    }
+//     return 0;
 
-    int cars;
-
-    cin >> cars;
-
-    cout << minTimeToRepairCars(ranks, cars);
-    
-    return 0;
-}
+// }
