@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(179, 216, 168);
+    padding-left: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.content {
+    width: 475px;
+    height: 492px;
+    background-color: rgb(61, 141, 122);
+    border: 2px solid black;
+    padding-left: 10px;
+    overflow: scroll;
+    color: white;
+    cursor: pointer;
+
+}
+
+.play {
+    display: flex;
+    justify-content: center;
+}

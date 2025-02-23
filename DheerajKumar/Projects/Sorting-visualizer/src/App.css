@@ -1,0 +1,71 @@
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.mainInput{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.MainGraph {
+  width: 80%;
+  height: 500px;
+  border: 5px solid black;
+  background-color: black;
+  
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+  padding-left: 10px;
+
+  padding-bottom: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.userInput{
+  font-family: pixalFont;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.SelectAlgortim{
+  font-family: pixalFont;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.Button{
+  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  font-family: pixalFont;
+  border-color: aliceblue;
+  box-shadow: none;
+  font-size: 20px;
+  background-color: cornflowerblue;
+  color: aliceblue;
+}
+
+@font-face {
+  font-family: pixalFont;
+  src: url(./fonts/pixy/PIXY.ttf) format('truetype'),
+      url(fonts/pixy/PIXY.otf) format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
