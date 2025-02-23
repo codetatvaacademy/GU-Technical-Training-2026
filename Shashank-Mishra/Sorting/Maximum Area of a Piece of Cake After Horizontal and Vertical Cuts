@@ -1,0 +1,26 @@
+class Solution {
+    public int maxArea(int h, int w, int[] horizontalCuts, int[] verticalCuts) {
+        Arrays.sort(horizontalCuts);
+        Arrays.sort(verticalCuts);
+        int maxh = horizontalCuts[0];
+        int maxV = verticalCuts[0];
+        for (int i = 1; i <= horizontalCuts.length; i++) {
+            if (i == horizontalCuts.length) {
+                maxh = Math.max(maxh, h - horizontalCuts[i - 1]);
+                break;
+            }
+            maxh = Math.max(maxh, horizontalCuts[i] - horizontalCuts[i - 1]);
+        }
+        for (int i = 1; i <= verticalCuts.length; i++) {
+            if (i == verticalCuts.length) {
+                maxV = Math.max(maxV, w - verticalCuts[i - 1]);
+                break;
+            }
+            maxV = Math.max(maxV, verticalCuts[i] - verticalCuts[i - 1]);
+        }
+        long modulo = 1000000000L + 7;
+        long ans = (1L * maxh * maxV) % modulo;
+        return (int) ans;
+
+    }
+}

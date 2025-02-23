@@ -1,0 +1,20 @@
+class Solution {
+    public int numberOfAlternatingGroups(int[] colors) {
+        int start =0;
+        int end =2;
+        int c=0;
+          while(start<colors.length)
+          { 
+            if(colors[start]==1 && colors[(start+1)%colors.length]==0 && colors[end]==1){
+                c++;
+            }
+            else if(colors[start]==0 && colors[(start+1)%colors.length]==1 && colors[end]==0){
+                c++;
+            }
+              end= (end+1)%colors.length;
+
+            start++;
+          }
+          return c;   
+    }
+}

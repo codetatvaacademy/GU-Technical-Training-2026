@@ -39,3 +39,9 @@ class NumberOfSubArrayOfSizeKAndAverageGreaterThanOrEqualToThreshold{
         System.out.println("The Number of Subarray:" + numOfSubarrays(arr, k, threshold));
     }
 }
+
+//time complexity of the function: O(n)
+//space complexity of the function : O(1)
+
+//time complexity of whole program: O(n)+O(n)
+//space complexity of the whole program: O(n)
