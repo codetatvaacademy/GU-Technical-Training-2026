@@ -1,0 +1,25 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style:unset;
+    background-color: rgba(115, 135, 80, 0.55);
+    text-align: center;
+    padding: 20px;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #222;
+}
+
