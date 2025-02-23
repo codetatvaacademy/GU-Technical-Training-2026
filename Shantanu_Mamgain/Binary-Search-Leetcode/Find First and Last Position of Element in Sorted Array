@@ -1,0 +1,44 @@
+class Solution {
+    public int firstPosition(int[] nums, int x, int n){
+        int low=0;
+        int high=n-1;
+        int first=-1;
+        int mid=low+(high-low)/2;
+        while(low<=high){
+            mid=low+(high-low)/2;
+            
+            if(nums[mid]>=x){
+                first=mid;
+                low=mid+1;
+            }
+            else{
+                high=mid-1;
+            }
+        }
+        return first;
+    }
+    public int lastPosition(int[] nums, int x, int n){
+        int low=0;
+        int high=n-1;
+        int last=-1;
+        int mid=low+(high-low)/2;
+        while(low<=high){
+            mid=low+(high-low)/2;
+            if(nums[mid]==x){
+                last=mid;
+                low=mid+1;
+            }
+            else if(nums[mid]<x){
+                low=mid+1;
+            }
+            else{
+                high=mid-1;
+            }
+        }
+        return last;
+    }
+    public int[] searchRange(int[] nums, int target) {
+        int n= nums.length;
+        return new int []{firstPosition(nums,target,n),lastPosition(nums,target,n)};
+    }
+}

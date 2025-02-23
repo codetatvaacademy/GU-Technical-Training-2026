@@ -1,0 +1,26 @@
+class Solution {
+    public int smallestRangeII(int[] nums, int k) {
+        Arrays.sort(nums);
+        int bestL = nums[0]+k;
+        // System.out.println("bestL "+ bestL);
+        int bestR = nums[nums.length-1]-k;
+        // System.out.println("bestR "+ bestR);
+        int res = nums[nums.length-1] - nums[0];
+        // System.out.println("res "+ res);
+
+        for(int i =0 ; i < nums.length-1; i++){
+            // int min = nums[i+1]-k;
+            // System.out.println("min "+ min);
+            // int minVal = Math.min(nums[i+1]-k,bestL);
+            // System.out.println("minVal "+ minVal);
+            // // int max = nums[i]+k;
+            // // System.out.println("max "+ max);
+            // int maxVal = Math.max(nums[i]+k,bestR);
+            // System.out.println("maxVal "+ maxVal);
+            res = Math.min(res,Math.max(nums[i]+k,bestR) - Math.min(nums[i+1]-k,bestL));
+            // System.out.println("res "+ res);
+        }
+        // System.out.println("res "+ res);
+        return res;
+    }
+}

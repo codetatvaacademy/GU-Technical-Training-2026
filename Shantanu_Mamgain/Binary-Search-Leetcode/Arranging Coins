@@ -1,0 +1,22 @@
+class Solution {
+    public int arrangeCoins(int n) {
+        long min = 0;
+        long max = n;
+        long mid = 0;
+        long ans = 0;
+
+        while(min <= max){
+            mid = min + (max - min)/2;
+
+            if((mid*(mid+1))/2 <= n){
+                ans = mid;
+                min = mid + 1;
+            } 
+            else{
+                max = mid - 1;
+            }
+        }
+
+        return (int)ans;
+    }
+}
