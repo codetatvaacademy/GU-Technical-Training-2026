@@ -1,5 +1,4 @@
 import java.util.*;
-import java.math.*;
 
 public class MaximumRunningTimeOfNcomputers {
     public static long maxRunTime(int n, long[] batteries) {
