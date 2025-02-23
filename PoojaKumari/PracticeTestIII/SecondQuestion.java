@@ -45,7 +45,8 @@ public class SecondQuestion {
         result=beautifulStringLength(str);
         System.out.println(result);
 
-        
+        sc.close();
+
     }
     
 }

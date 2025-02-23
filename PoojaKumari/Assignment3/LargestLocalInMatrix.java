@@ -37,5 +37,7 @@ public class LargestLocalInMatrix {
                 System.out.print(result[i][j]+" ");
             }
         }
+        sc.close();
+
     }
 }

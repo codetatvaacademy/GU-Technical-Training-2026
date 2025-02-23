@@ -1,0 +1,148 @@
+body {
+    height: auto;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-color: black;
+    background: 1px solid black;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+}
+.contain{
+    padding-top: 60px;
+}
+.Welcome{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.text{
+    color: #8eb508;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.Sortmethod{
+    background-color: white;
+    color: #8eb508;
+    padding: 10px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: sans-serif;
+    border-radius: 5px;
+}
+.Arraycontainer{
+    padding-top: 20px;
+}
+.Array{
+    color: #8eb508;
+    font-size: 25px;
+    font-weight: 600;
+}
+.inputContainer{
+    padding-top: 20px;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.method{
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
+}
+button {
+    align-items: center;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 200;
+    background-color: #8eb508;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.6s;
+}
+button:hover {
+    background-color: white;
+    color: #000;
+}
+.bars-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 400px;
+    width: 80%;
+    margin: auto;
+    border: 1px solid #8eb508;
+    border-radius: 5px;
+    border-width: 5px;
+}
+.bar {
+    width: 20px;
+    background-color: teal;
+    margin: 0 3px;
+    transition: height 0.3s ease-in-out;
+}
+.moreFunction{
+    padding-top: 30px;
+}
+.ImportanceBox{
+    padding-top: 40px;
+    align-items: center;
+}
+.Algorithm{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 50px;
+}
+.importantText{
+    font-size: 20px;
+    color: #8eb508;
+    font-weight: 200;
+    padding-top: 5px;
+}
+.para{
+    font-size: 16px;
+    color: white;
+    padding: 20px;
+    border: 1px solid #8eb508;
+}
+.Info{
+    height: auto;
+    padding-bottom: 30px;
+    margin-top: 90px;
+}
+.footerHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.name{
+    font-family: 10px;
+    font-weight: 200;
+    font-style: italic;
+}
+.listdata{
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+}
+.head{
+    font-size: 25px;
+    color: #8eb508;
+    font-weight: 700;
+}
+li{
+    text-align: left;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

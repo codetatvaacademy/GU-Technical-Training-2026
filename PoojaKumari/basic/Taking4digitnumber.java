@@ -11,6 +11,8 @@ public class Taking4digitnumber {
         int digit4=(number%10);
         int sum=digit1+digit2+digit3+digit4;
         System.out.println("Sum of digits:"+sum);
+        sc.close();
+
 
     }
     

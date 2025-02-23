@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort Algorithm</title>
+    <link rel="stylesheet" href="selection.css">
+</head>
+
+<body>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <video class="background-video" autoplay loop muted>
+            <source src="banner_video_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+
+        <!-- Centered Content -->
+        <div class="centered-content">
+            <h1>Merge Sort Algorithm</h1>
+            <a href="#" class="start-learning-btn">Start Learning</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Introduction</h2>
+        <p>Merge Sort is a sorting algorithm based on the Divide and Conquer technique. It divides the input array into
+            two halves, calls itself for the two halves, and then merges the two sorted halves.</p>
+
+        <h2>Algorithm Steps</h2>
+        <ul>
+            <li><b>Divide:</b> Divide the array into two halves until each subarray contains a single element.</li>
+            <li><b>Conquer:</b> Recursively sort each half.</li>
+            <li><b>Merge:</b> Merge the two sorted halves to produce the final sorted array.</li>
+        </ul>
+
+        <h2>Merge Sort Code (C++)</h2>
+        <div class="code-container">
+            <pre>
+<code>
+// C++ program to implement Merge Sort
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+void merge(vector&lt;int&gt;& arr, int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+    vector&lt;int&gt; L(n1), R(n2);
+    
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSort(vector&lt;int&gt;& arr, int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);
+    }
+}
+
+int main() {
+    vector&lt;int&gt; arr = {12, 11, 13, 5, 6, 7};
+    int n = arr.size();
+    mergeSort(arr, 0, n - 1);
+    
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
+</code>
+            </pre>
+        </div>
+
+        <h2>Output</h2>
+        <p><b>Sorted vector :</b> 5 6 7 11 12 13</p>
+
+        <h2>Complexity Analysis</h2>
+        <ul>
+            <li><b>Best Case:</b> Ω(n log n), occurs in all cases since merge sort always divides the array into two
+                halves.</li>
+            <li><b>Average Case:</b> θ(n log n), as the division and merging happen in all cases.</li>
+            <li><b>Worst Case:</b> O(n log n), since the merge process takes linear time.</li>
+            <li><b>Auxiliary Space:</b> O(n), due to the use of temporary arrays during merging.</li>
+        </ul>
+
+        <!-- Video Tutorial Section -->
+        <h3>Video Tutorial</h3>
+        <div class="play">
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/JSceec-wEyw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+
+</html>

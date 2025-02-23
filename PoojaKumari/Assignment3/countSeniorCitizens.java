@@ -24,6 +24,8 @@ public class countSeniorCitizens {
         }
         int result=countSeniors(details);
         System.out.print(result);
+        sc.close();
+
     }
     
 }

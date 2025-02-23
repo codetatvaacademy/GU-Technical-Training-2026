@@ -75,7 +75,7 @@ int main(){
             citations.push_back(entry);
         }
         Solution ClassTesting;
-        cout<<"The maximum hIndex -> "<<ClassTesting.hIndex(citations)<<"\n\t";
+        cout<<"The maximum hIndex -> "<<ClassTesting.hIndex(citations)<<"\n\t ";
     }
 }
 

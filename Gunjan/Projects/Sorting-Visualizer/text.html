@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sorting Vizualizer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="art.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="mainContainer">
+                <div class="contain"> 
+                    <h1 class="Welcome">Welcome To</h1>
+                    <h1 class="text">Sorting Visualizer</h1>
+                    <label for="sortingMethod" class="Sortmethod">Choose a Sorting Method</label>
+                    <div class="Arraycontainer">
+                        <label for="arraySize" class="Array">Array Size:</label>
+                        <input type="range" id="arraySize" min="5" max="50" value="25">
+                    </div>
+                    <div class="inputContainer">
+                        <select id="sortingMethod" class="method">
+                            <option value="select">Select a Method</option>
+                            <option value="bubbleSort">Bubble Sort</option>
+                            <option value="insertionSort">Insertion Sort</option>
+                            <option value="mergeSort">Merge Sort</option>
+                            <option value="selectionSort">Selection Sort</option>
+                            <option value="quickSort">Quick Sort</option>
+                        </select> 
+                        <button onclick="generateArray()">Generate Array</button>
+                        <button onclick="startSorting()">Sort</button>
+                    </div>
+                </div>
+                <div id="barsContainer" class="bars-container"></div>
+                <div class="moreFunction">
+                    <label for="speedControl" class="Array">Speed:</label>
+                    <input type="range" id="speedControl" min="1" max="5" value="3">
+                    <button onclick="pauseSorting()">Pause</button>
+                    <button onclick="resumeSorting()">Resume</button>
+                </div>
+                <div class="ImportanceBox">
+                    <h1 class="Algorithm">Importance Of Sorting Algorithms</h1>
+                    <div class="Importance">
+                        <h2 class="importantText">Searching Efficiency</h2>
+                        <p class="para"> A sorted dataset enables faster searching techniques like binary search, which significantly reduces search time compared to an unsorted dataset.</p>
+                    </div>
+                    <div class="Importance">
+                        <h2 class="importantText">Data Organization</h2>
+                        <p class="para">Ordered data is easier to read, interpret, and process, making it useful for databases, financial records, and reports.</p>
+                    </div>
+                    <div class="Importance">
+                        <h2 class="importantText">Algorithm Optimization</h2>
+                        <p class="para">Many complex algorithms, such as pathfinding, scheduling, and machine learning, perform better with sorted input.</p>
+                    </div>
+                    <div class="Importance">
+                        <h2 class="importantText">Data Compression</h2>
+                        <p class="para"> Sorted data allows for more efficient compression techniques and optimized storage management.</p>
+                    </div>
+                </div>
+                <div class="Info">
+                    <div class="head">
+                        <h1>Developers</h1>
+                    </div>
+                    <div class="footerHead">
+                        <div class="listdata">
+                            <h1 class="name">Shashank Mishra</h1>
+                            <ul>
+                                <li>Mail- bsmshashankmishra@gmail.com</li>
+                                <li>Contact- 8210151433</li>
+                                <li>Id- 22SCSE1011750</li>
+                                <li><a href="https://leetcode.com/u/Shashank78/">LeetCode</a></li>
+                                <li><a href="https://github.com/shashank09mishra">GitHub</a></li>
+                                <li><a href="http://www.linkedin.com/in/shashank-mishra-6670b0247">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                        <div class="listdata">
+                            <h1 class="name">Atishay Jain</h1>
+                            <ul>
+                                <li>Mail- atishey171@gmail.com</li>
+                                <li>Contact- 701796251</li>
+                                <li>Id- 22SCSE1300008</li>
+                                <li><a href="https://leetcode.com/u/Ati_jain/">LeetCode</a></li>
+                                <li><a href="https://github.com/mahadevatishay">GitHub</a></li>
+                                <li><a href="https://www.linkedin.com/in/atishay-jain-993486265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                        <div class="listdata">
+                            <h1 class="name">Gunjan</h1>
+                            <ul>
+                                <li>Mail- chaudharymanshi473@gmail.com</li>
+                                <li>Contact- 8477885800</li>
+                                <li>Id- 22SCSE1010568</li>
+                                <li><a href="https://leetcode.com/u/Gunjan_4/">LeetCode</a></li>
+                                <li><a href="https://github.com/GunjanChaudhary1">GitHub</a></li>
+                                <li><a href="https://www.linkedin.com/in/gunjan-320b65252/">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="style.js"></script>
+    </body>
+</html>

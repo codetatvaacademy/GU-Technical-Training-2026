@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="banner_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+
+        <h1 class="logo">SortXplorer</h1>
+
+        <div class="content">
+            <h1 data-aos="fade-up">Sort Smarter, Not Harder  Visualize, Learn, and Master</h1>
+              <a href="#info-section" class="start-learning-btn">Start Learning</a>
+        </div>
+    </div>
+
+    <div class="below-video-section">
+        <h2 >Introduction</h2>
+        <p >
+            With SortXplorer, watch sorting algorithms come to life through interactive visualizations. Understand, compare, and
+            master sorting techniques in a fun and intuitive way.
+        </p>
+        <br>
+    </div>
+
+    
+    <h2 class="section-title">Explore the Documentation First</h2>
+
+<div  id="info-section" class="info-section">
+    <div class="info-box">
+        <img src="merge sort.png" alt="Merge Sort" class="info-image">
+        <div class="info-content">
+            <h3>Merge Sort</h3>
+            <p>A stable, recursive algorithm that divides arrays into halves, sorts them individually, and merges them efficiently for
+            optimal performance.</p>
+            <a href="merge_sort.html" class="know-more-btn">Know More</a>
+        </div>
+    </div>
+    <div class="info-box">
+        <img src="Quick Sort.png" alt="Quick Sort" class="info-image">
+        <div class="info-content">
+            <h3>Quick Sort</h3>
+            <p>A fast, divide-and-conquer sorting algorithm that efficiently sorts data by partitioning and recursively sorting smaller
+            subarrays.</p>
+            <a href="quick_sort.html" class="know-more-btn">Know More</a>
+        </div>
+    </div>
+    <div class="info-box">
+        <img src="Selection Sort.png" alt="Selection Sort" class="info-image">
+        <div class="info-content">
+            <h3>Selection Sort</h3>
+            <p>A simple comparison-based sorting technique that repeatedly selects the smallest element and swaps it to its correct
+            position.</p>
+            <a href="selection_sort.html" class="know-more-btn">Know More</a>
+        </div>
+    </div>
+</div>
+
+<div class="button-container" >
+    <a href="sorting_visualizer.html" class="btn-two">
+        <span>Try Now</span>
+    </a>
+</div>
+
+<footer>
+    Designed and Developed by Kanishk, Aditya, and Yuvraj
+</footer>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+
+
+</html>

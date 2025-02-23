@@ -36,7 +36,7 @@ public class ThirdQuestion {
         int result=0;
         result=largestSumOfMinimizedSubArray(nums, k);
         System.out.println(result);
-
+        sc.close();
     }
     
 }

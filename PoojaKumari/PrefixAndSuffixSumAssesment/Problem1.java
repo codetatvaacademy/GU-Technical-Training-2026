@@ -39,6 +39,7 @@ public class Problem1 {
        // calculateSum(nums);
        answer=calculateSum(nums);
        System.out.println("Midle index is "+answer);
+       sc.close();
     }
 }
 // time complesixity for leftSum=O(N)
