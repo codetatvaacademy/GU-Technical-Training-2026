@@ -1,0 +1,21 @@
+class Solution {
+    public int[] diStringMatch(String s) {
+
+        int d = s.length();
+        int i = 0;
+        int j = 0;
+        int ch[] = new int[s.length() + 1];
+        while (j < s.length()) {
+            if (s.charAt(j) == 'I') {
+                ch[j] = i;
+                i++;
+            } else {
+                ch[j] = d;
+                d--;
+            }
+            j++;
+        }
+        ch[j] = i;
+        return ch;
+    }
+}

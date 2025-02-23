@@ -25,6 +25,7 @@ public class Question1 {
         int count=0;
         count=countOccurence(arr, target);
         System.out.print(count);
+        sc.close();
     }
     
 }

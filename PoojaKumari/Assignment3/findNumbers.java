@@ -20,5 +20,7 @@ public class findNumbers {
         }
         int result=findEvenNumbers(nums);
         System.out.print(result);
+        sc.close();
+
     }
 }

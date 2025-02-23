@@ -27,6 +27,8 @@ public class MinOperationforArrayIncreasing {
         }
         int result=minOperations(nums);
         System.out.print(result);
+        sc.close();
+
     }
     
 }

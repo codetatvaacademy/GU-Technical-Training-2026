@@ -8,7 +8,7 @@ public class FourthQuestion {
                 frequency[i]++;
             }
         }
-        int start=0;
+        // int start=0;
         int end=0;
         while(end<str.length()){
             
@@ -23,6 +23,7 @@ public class FourthQuestion {
         int length=0;
         length=longestSemiRepetitiveSubString(str);
         System.out.println(length);
+        sc.close();
     }
     
     

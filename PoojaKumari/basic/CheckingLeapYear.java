@@ -6,6 +6,8 @@ public class CheckingLeapYear {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter Year:");
         int year=sc.nextInt();
+        sc.close();
+
         
     }
     

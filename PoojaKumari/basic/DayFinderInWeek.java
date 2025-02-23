@@ -22,6 +22,8 @@ public class DayFinderInWeek {
         } else {
             System.out.println("Invalid input! Please enter a number between 1 and 7.");
         }
+        sc.close();
+
     }
     
 }

@@ -1,0 +1,21 @@
+class Solution {
+    public int arrangeCoins(int n) {
+        long low =0;
+        long high =n;
+        long mid =0;
+        long k=0;
+        long ans=0;
+        while(low<=high){
+             mid = low +(high-low)/2;
+            k=(mid*(mid+1)/2); 
+            if(k<=n){
+                ans =mid;
+                low =mid+1;
+            }
+            else{
+                high = mid -1;
+            }
+        }
+        return (int) ans;
+    }
+}

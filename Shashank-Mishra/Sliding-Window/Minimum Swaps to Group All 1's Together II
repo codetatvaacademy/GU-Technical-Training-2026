@@ -1,0 +1,38 @@
+class Solution {
+    public int minSwaps(int[] nums) {
+        int n = nums.length;
+        int start = 0;
+        int end = 0;
+        int count = 0;
+        int maxi = 0;
+        int store = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
+                count++;
+            }
+        }
+        if(count==0 || count==n){
+            return 0;
+        }
+        end = count - 1;
+        for (int i = start; i <= end; i++) {
+            if (nums[i] == 1) {
+                maxi++;
+            }
+        }
+        store = maxi;
+        while (start < nums.length) {
+            end++;
+            if (nums[end % n] == 1) {
+                maxi++;
+            }
+            if (nums[start] == 1) {
+                maxi--;
+            }
+            start++;
+            store = Math.max(store, maxi);
+        }
+        return count - store;
+    }
+
+}

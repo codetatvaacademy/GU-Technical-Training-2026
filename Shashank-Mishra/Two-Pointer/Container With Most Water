@@ -1,0 +1,21 @@
+class Solution {
+    public int maxArea(int[] nums) {
+        int i =0;
+        int j=nums.length-1;
+        int ans=0;
+        int count =0;
+        
+        while(i<=j){
+            if(nums[i]<nums[j]){
+                count=nums[i]*(j-i);
+                i++;
+            }
+            else{
+                count=nums[j]*(j-i);
+                j--;
+            }
+            ans=Math.max(ans,count);
+        }
+        return ans;
+    }
+}

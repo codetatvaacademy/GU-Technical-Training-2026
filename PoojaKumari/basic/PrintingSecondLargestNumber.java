@@ -9,7 +9,7 @@ public class PrintingSecondLargestNumber {
         int number2=sc.nextInt();
         System.out.println("Enter 3rd number:");
         int number3=sc.nextInt();
-        int largest =0;
+        // int largest =0;
         int SecondLargest=0;
         if(number1<number2 && number2>number3) {
             
