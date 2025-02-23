@@ -32,6 +32,6 @@ public class binarySearch {
         int answer=0;
         answer=search(nums,target);
         System.out.print("Target found at index:"+answer);
-
+        sc.close();
     }
 }

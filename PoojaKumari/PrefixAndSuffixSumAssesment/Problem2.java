@@ -37,6 +37,7 @@ public class Problem2 {
         for(int i=0;i<answer.length;i++){
             System.out.print(answer[i] + " ");
         }
+        sc.close();
     }
     
 }

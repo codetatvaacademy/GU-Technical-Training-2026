@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    background-color: rgb(179, 216, 168);
+    margin: 0;
+    padding-left: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Video Section */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for readability */
+}
+
+/* Logo in the Top Left */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
+
+/* Centered Heading & Button */
+.centered-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* Space between heading and button */
+}
+
+.centered-content h1 {
+    font-size: 60px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Start Learning Button */
+.start-learning-btn {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border: 2px solid white;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.start-learning-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px;
+    background: white;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Code Container */
+.code-container {
+    background-color: rgb(61, 141, 122);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: monospace;
+}
+
+/* Video Tutorial Section */
+.play {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.play iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

@@ -9,7 +9,7 @@ public class PrintingSquareAndCube {
     int cube= num*num*num;  
     System.out.println("Square of given number="+square);
     System.out.println("Cube of given number="+cube);
+    sc.close();
     }
 
-    
 }

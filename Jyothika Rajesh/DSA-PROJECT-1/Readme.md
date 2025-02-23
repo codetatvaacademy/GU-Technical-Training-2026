@@ -1,0 +1,2 @@
+**"Sorting Simplified: Watch Algorithms in Action! 🚀"**    
+Experience the magic of sorting with our interactive **Sorting Visualizer**!   Watch **Bubble, Selection, Insertion, Merge, and Quick Sort** come to life with real-time animations. Customize your experience by choosing the number of elements, adjusting the speed, and pausing or resuming at any time.   Compare sorting speeds and understand time complexities effortlessly. Perfect for students, developers, and algorithm enthusiasts—because sorting is not just a concept, it's a visual experience! 🎨✨  

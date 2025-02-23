@@ -1,0 +1,21 @@
+class Solution {
+    public int trap(int[] height) {
+        int pSum[] = new int [height.length];
+        int sSum[] = new int [height.length];
+        int ans=0;
+        pSum[0] = height[0];
+        sSum [height.length - 1] = height [height.length - 1];
+
+        for (int i = 1; i < height.length; i++) {
+            pSum[i] = Math.max(pSum[i - 1], height[i]);
+        }
+        for(int i =height.length-2;i>=0;i--){
+            sSum[i]=Math.max(sSum[i+1],height[i]);
+        }
+        for(int i =0; i< height.length;i++){
+            ans +=Math.min(pSum[i],sSum[i])-height[i];
+        }
+        return ans;
+
+    }
+}
