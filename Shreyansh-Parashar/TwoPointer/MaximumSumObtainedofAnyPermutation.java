@@ -39,14 +39,14 @@ public class MaximumSumObtainedofAnyPermutation {
         
 
         int[][] requests = new int[p][2];
-        for(int i = 0; i < p; i++){
-            
+        for(int i = 0; i < p; i++){           
             requests[p][0] = sc.nextInt();
-            requests[p][1] = sc.nextInt();
-            
+            requests[p][1] = sc.nextInt();           
         }
 
         int ans = obj.maxSumRangeQuery(nums, requests);
         System.out.println(ans);
+
+        sc.close();
     }
 }

@@ -55,5 +55,6 @@ public class NextPermutation {
         obj.nextPermutation(nums);
 
         System.out.println(Arrays.toString(nums));
+        sc.close();
     }
 }

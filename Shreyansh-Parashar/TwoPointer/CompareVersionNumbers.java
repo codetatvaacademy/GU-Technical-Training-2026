@@ -30,5 +30,6 @@ public class CompareVersionNumbers {
         int result = obj.compareVersion(varsion1, varsion2);
 
         System.out.println(result);
+        sc.close();
     }
 }

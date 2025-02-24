@@ -47,6 +47,6 @@ public class IntervalListIntersections {
         for(int[] element : result){
             System.out.println(Arrays.toString(element));
         }
-
+        sc.close();
     }
 }

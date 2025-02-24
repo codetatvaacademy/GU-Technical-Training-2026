@@ -30,5 +30,6 @@ public class ContainerWithMostWater {
 
         int maxWater = obj.maxArea(height);
         System.out.println(maxWater);
+        sc.close();
     }
 }

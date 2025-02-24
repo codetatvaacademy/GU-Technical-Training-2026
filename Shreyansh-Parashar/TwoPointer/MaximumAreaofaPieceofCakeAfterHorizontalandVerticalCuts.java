@@ -42,5 +42,6 @@ public class MaximumAreaofaPieceofCakeAfterHorizontalandVerticalCuts {
 
         int result = obj.maxArea(h, w, horizontalCuts, verticalCuts);
         System.out.println(result);
+        sc.close();
     }
 }

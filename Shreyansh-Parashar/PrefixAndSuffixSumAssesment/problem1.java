@@ -39,7 +39,17 @@ public class problem1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         problem1 obj = new problem1();
-        int[] nums = {2,3,-1,8,4};
+
+
+        System.out.println("Enter the number of element in Array: ");
+        int n = sc.nextInt();
+        int[] nums = new int[n];
+
+        System.out.println("Enter the element in Arrays: ");
+        for(int i = 0; i < n;i++){
+            nums[i] = sc.nextInt();
+        }
+
         int midIndex = obj.middleIndex(nums);
         System.out.println(midIndex);
     }
