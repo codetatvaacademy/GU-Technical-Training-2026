@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package Atishay_Jain;
 
 import java.util.*;
@@ -13,3 +14,20 @@ public class RupeesToPaise {
         System.out.println("The amount in paisa: " + paisa);
     }
 }
+=======
+package Atishay_Jain;
+
+import java.util.*;
+
+public class RupeesToPaise {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Enter rupee :" );
+        int rupee=sc.nextInt();
+
+        int paisa=100*rupee;
+        System.out.println("The amount in paisa: " + paisa);
+    }
+}
+>>>>>>> 453c8f73 (Sliding Window add)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.*;
 public class table {
     public static void main(String[] args) {
@@ -10,3 +11,17 @@ public class table {
         }
     }
 }
+=======
+import java.util.*;
+public class table {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter the number you want to print it's table ");
+        int n = sc.nextInt();
+        for(int i =1;i<=10;i++)
+        {
+            System.out.println(n+" * "+i+" = "+(n*i));
+        }
+    }
+}
+>>>>>>> 453c8f73 (Sliding Window add)
