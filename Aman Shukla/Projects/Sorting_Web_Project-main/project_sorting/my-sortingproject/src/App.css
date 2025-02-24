@@ -1,0 +1,269 @@
+/* General Page Styling */
+body {
+  background-color: #0a0f1f;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Home Page */
+.home-container h1 {
+  color: #ffd700;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.sorting-box {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.sorting-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+.sorting-box h4 {
+  color: #00ff00;
+  font-size: 1.5rem;
+}
+
+.sorting-box button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sorting-box button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Sorting Algorithm Title */
+.algo-container h1 {
+  color: #ffd700;
+  display: flex;
+  justify-content: center; 
+  width: 100vw;
+
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Sorting Algorithm Description */
+.sort-description {
+  color: #d8b9ff; /* Light Violet */
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 70%;
+  max-width: 800px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* Complexity Text */
+.complexity {
+  color: #ffb6c1; /* Light Pink */
+  font-size: 1rem;
+  margin: 5px auto;
+  width: 60%;
+  text-align: center;
+}
+
+/* Sorting Page Layout */
+.sorting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Visualizer & Controls - Properly Aligned */
+.visualizer-controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Visualizer - Left */
+.visualizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 300px;
+  width: 65%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+/* Bars Inside Visualizer */
+.bar {
+  width: 14px;
+  margin: 2px;
+  background-color: green;
+  transition: height 0.2s ease-in-out, background 0.3s;
+}
+
+.bar:hover {
+  background-color: #00ff00;
+}
+
+/* Controls - Right */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 30%;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 140px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Speed Slider */
+.slider-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+input[type="range"] {
+  width: 150px;
+  accent-color: blue;
+  cursor: pointer;
+}
+
+/* User Input - Input and Button in One Row */
+.user-input {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centering */
+  gap: 10px; /* Space between input and button */
+  margin-top: 20px;
+  width: 100%;
+}
+
+input[type="text"] {
+  padding: 12px;
+  width: 50%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  font-size: 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+input[type="text"]::placeholder {
+  color: lightgray;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #00ff00;
+  box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Set Array Button Styling */
+button.set-array-btn {
+  background-color: #28a745; /* Green */
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button.set-array-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .visualizer-controls-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .visualizer {
+    width: 90%;
+    height: 250px;
+  }
+
+  .controls {
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .user-input {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+}

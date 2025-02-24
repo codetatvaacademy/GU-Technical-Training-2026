@@ -1,0 +1,42 @@
+class Solution {
+
+    bool possible(vector<int>& weights, int days, int currentWeight){
+        
+        int loadCargo = 0, currentDays = 1, weight = 0;
+        for(int i = 0; i < weights.size(); i++){
+            if(loadCargo + weights[i] > currentWeight){
+                currentDays++;
+                loadCargo = weights[i];
+                if(currentDays > days){
+                    return false;
+                }
+            }else{
+                loadCargo += weights[i];
+            }
+        }
+        return true;
+    }
+
+public:
+
+    int shipWithinDays(vector<int>& weights, int days) {
+        int minimumWeight = 0, maximumWeight = 0, optimalWeight = 0;
+
+        for(int i = 0; i < weights.size(); i++){
+            maximumWeight += weights[i];
+            minimumWeight = max(minimumWeight, weights[i]);
+        }
+        
+        while(maximumWeight >= minimumWeight){
+            optimalWeight = (minimumWeight + maximumWeight) / 2;
+            
+            if(possible(weights, days, optimalWeight)){
+                maximumWeight = optimalWeight - 1;
+            }else{
+                minimumWeight = optimalWeight + 1;
+            }
+        }
+
+        return minimumWeight;
+   }
+};
