@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Sorting Visualizer</h1>
+    <div>
+        <label for="array-size">Array Size: </label>
+        <input type="number" id="array-size" value="10" min="5" max="100">
+        <br>
+        <br>
+        <label for="algorithm">Select Sorting Algorithm: </label>
+        <select id="algorithm">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+        </select>
+        <button onclick="generateArray()">Generate Array</button>
+        <button onclick="sortArray()">Sort</button>
+    </div>
+    <br><br>
+    <div>
+        <label for="array-input">Enter Array (comma separated): </label>
+        <input type="text" id="array-input" placeholder="e.g., 10, 20, 5, 8">
+        <button onclick="setManualArray()">Set Array</button>
+    </div>
+
+    <div class="array-container" id="array-container"></div>
+
+    <footer>
+        Created with ❤| Sorting Visualizer | © 2025
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
