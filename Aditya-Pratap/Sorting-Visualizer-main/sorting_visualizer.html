@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <link rel="stylesheet" href="sorting_visualizer.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="banner_video_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+
+        <h1 class="logo">SortXplorer</h1>
+
+        <div class="content">
+            <h1 data-aos="fade-up">Let the magic begin . . .</h1>
+            <a href="#info-section" class="start-learning-btn">Start Learning</a>
+        </div>
+    </div>
+    <div class="below-video-section">
+        <h2>Sorting Visualizer</h2>
+        <p>Enter the numbers to visualize array, or click on generate bars to generate a random array</p>
+        <br>
+    </div>
+    <div class="visualizer-container" id="info-section">
+        <h2>Sorting Visualizer</h2>
+        <label for="algorithm">Choose Sorting Algorithm:</label>
+        <select id="algorithm">
+            <option value="quick">Quick Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="selection">Selection Sort</option>
+        </select>
+    
+        <input type="text" id="array-input" placeholder="Enter numbers (comma-separated)">
+        <button onclick="generateBars()">Generate Bars</button>
+        <button onclick="startSorting()">Start Sorting</button>
+    
+        <div id="bars-container"></div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        let barsContainer = document.getElementById("bars-container");
+
+        function generateBars() {
+                let barsContainer = document.getElementById("bars-container");
+                barsContainer.innerHTML = ""; // Clear existing bars
+
+                let inputArray = document.getElementById("array-input").value.trim();
+                let array;
+
+                if (inputArray !== "") {
+                    // Convert user input into an array of numbers
+                    array = inputArray.split(/\s*,\s*/).map(num => parseInt(num, 10)).filter(num => !isNaN(num));
+                } else {
+                    // Generate a random array if input is empty
+                    array = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100) + 1);
+                }
+
+                console.log("Generated array:", array); // Debugging purpose
+
+                // Create bars based on the array values
+                array.forEach(value => {
+                    let bar = document.createElement("div");
+                    bar.style.height = `${value * 3}px`;
+                    bar.classList.add("bar");
+                    barsContainer.appendChild(bar);
+                });
+            }
+
+
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function startSorting() {
+            let algorithm = document.getElementById("algorithm").value;
+            let bars = document.querySelectorAll(".bar");
+            let array = Array.from(bars, bar => parseInt(bar.style.height) / 3);
+
+            if (algorithm === "quick") {
+                await quickSort(array, 0, array.length - 1, bars);
+            } else if (algorithm === "merge") {
+                await mergeSort(array, 0, array.length - 1, bars);
+            } else if (algorithm === "selection") {
+                await selectionSort(array, bars);
+            }
+        }
+
+        async function quickSort(arr, low, high, bars) {
+            if (low < high) {
+                let pivotIndex = await partition(arr, low, high, bars);
+                await quickSort(arr, low, pivotIndex - 1, bars);
+                await quickSort(arr, pivotIndex + 1, high, bars);
+            }
+        }
+
+        async function partition(arr, low, high, bars) {
+            let pivot = arr[high];
+            let i = low - 1;
+
+            for (let j = low; j < high; j++) {
+                if (arr[j] < pivot) {
+                    i++;
+                    [arr[i], arr[j]] = [arr[j], arr[i]];
+                    await swapBars(bars[i], bars[j]);
+                }
+            }
+            [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+            await swapBars(bars[i + 1], bars[high]);
+            return i + 1;
+        }
+
+        async function mergeSort(arr, left, right, bars) {
+            if (left < right) {
+                let mid = Math.floor((left + right) / 2);
+                await mergeSort(arr, left, mid, bars);
+                await mergeSort(arr, mid + 1, right, bars);
+                await merge(arr, left, mid, right, bars);
+            }
+        }
+
+        async function merge(arr, left, mid, right, bars) {
+            let leftArr = arr.slice(left, mid + 1);
+            let rightArr = arr.slice(mid + 1, right + 1);
+            let i = 0, j = 0, k = left;
+
+            while (i < leftArr.length && j < rightArr.length) {
+                if (leftArr[i] < rightArr[j]) {
+                    arr[k] = leftArr[i];
+                    bars[k].style.height = `${leftArr[i] * 3}px`;
+                    i++;
+                } else {
+                    arr[k] = rightArr[j];
+                    bars[k].style.height = `${rightArr[j] * 3}px`;
+                    j++;
+                }
+                await sleep(200);
+                k++;
+            }
+
+            while (i < leftArr.length) {
+                arr[k] = leftArr[i];
+                bars[k].style.height = `${leftArr[i] * 3}px`;
+                i++;
+                k++;
+                await sleep(200);
+            }
+
+            while (j < rightArr.length) {
+                arr[k] = rightArr[j];
+                bars[k].style.height = `${rightArr[j] * 3}px`;
+                j++;
+                k++;
+                await sleep(200);
+            }
+        }
+
+        async function selectionSort(arr, bars) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                let minIndex = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (arr[j] < arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                if (minIndex !== i) {
+                    [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+                    await swapBars(bars[i], bars[minIndex]);
+                }
+            }
+        }
+
+       async function swapBars(bar1, bar2) {
+            return new Promise(resolve => {
+                requestAnimationFrame(() => {
+                    let tempHeight = bar1.style.height;
+                    bar1.style.height = bar2.style.height;
+                    bar2.style.height = tempHeight;
+                    setTimeout(resolve, 50); // 🔥 Reduced delay for faster sorting
+                });
+            });
+        }
+
+    </script>
+    </body>
+    
+    
+    </html>

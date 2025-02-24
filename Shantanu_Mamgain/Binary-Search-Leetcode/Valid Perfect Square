@@ -1,0 +1,28 @@
+class Solution {
+    public boolean isPerfectSquare(int num) {
+        long min = 1;
+        long max = num;
+        
+        long mid = 0;
+
+        if(num == 1){
+            return true;
+        }
+
+        while(min <= max){
+            mid = (min+max)/2;
+
+            if(mid*mid == num){
+                return true;
+            }
+            else if(mid*mid < num){
+                min = mid + 1;
+            } 
+            else{
+                max = mid - 1;
+            }
+        }
+
+        return false;
+    }
+}

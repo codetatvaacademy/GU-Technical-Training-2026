@@ -1,0 +1,32 @@
+class Solution {
+    public int[] getSumAbsoluteDifferences(int[] nums) {
+        int ps[]= new int[nums.length];
+        ps[0]=nums[0];
+        int n= nums.length;
+        int ans[] =new int[nums.length];
+        int ans1[] =new int[nums.length];
+        
+        for(int i=1;i<n;i++)
+        {
+            ps[i] = ps[i-1] +nums[i];
+        }
+
+        for(int i=0;i<n;i++)
+        { 
+            if(i==0 || i==n-1)
+            {
+             ans[i]=Math.abs(ps[n-1]-n*nums[i]);
+            }
+            else
+            {
+              ans[i] =Math.abs((nums[i]*i)-ps[i-1]);
+              ans1[i]=Math.abs((nums[i]*(n-1-i))-Math.abs((ps[n-1]-ps[i])));
+            }
+        }
+        for(int i=0;i<n;i++)
+        {
+            nums[i]=ans[i]+ans1[i];
+        }
+        return nums;
+    }
+}

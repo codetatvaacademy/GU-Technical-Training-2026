@@ -1,0 +1,28 @@
+class Solution {
+    public int countSubarrays(int[] nums, int k){
+        int countk =0;
+        int start =0;
+        int end = 0;
+        while(end < nums.length){
+            if(nums[end] % 2 != 0){
+                k--;
+            }
+            while(k < 0){
+                if(nums[start] % 2 != 0){
+                    k++;
+                }
+                start ++;  
+            }
+            countk = countk + (end-start+1);
+            end++; 
+        }
+        return countk;
+    }
+    public int numberOfSubarrays(int[] nums, int k) {
+        
+        int countk1 = countSubarrays(nums, k);
+        int countk2 = countSubarrays(nums, k-1);
+
+        return (countk1 - countk2);
+    }
+}

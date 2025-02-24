@@ -1,0 +1,2 @@
+C:/Users/kadi9/StudioProjects/visualizer/android/app/.cxx/RelWithDebInfo/t2x4m491/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/kadi9/StudioProjects/visualizer/android/app/.cxx/RelWithDebInfo/t2x4m491/arm64-v8a/CMakeFiles/rebuild_cache.dir

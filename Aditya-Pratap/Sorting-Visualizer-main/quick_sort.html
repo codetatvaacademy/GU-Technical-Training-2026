@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quick.css">
+</head>
+
+<body>
+    <h1>Quick Sort Algorithm</h1>
+    <p>QuickSort is a sorting algorithm based on the Divide and Conquer that picks an element as a pivot and partitions
+        the given array around the picked pivot by placing the pivot in its correct position in the sorted array.</p>
+
+    <p>QuickSort works on the principle of divide and conquer, breaking down the problem into smaller sub-problems.
+
+        There are mainly three steps in the algorithm:
+    </p>
+    <p>
+        <li>Choose a Pivot: Select an element from the array as the pivot. The choice of pivot can vary (e.g., first
+            element, last element, random element, or median).
+        </li>
+    </p>
+    <p>
+        <li>Partition the Array: Rearrange the array around the pivot. After partitioning, all elements smaller than the
+            pivot will be on its left, and all elements greater than the pivot will be on its right. The pivot is then
+            in its correct position, and we obtain the index of the pivot.</li>
+    </p>
+    <p>
+        <li>Recursively Call: Recursively apply the same process to the two partitioned sub-arrays (left and right of
+            the pivot).
+        </li>
+    </p>
+    <p>
+        <li>Further divide these two subarrays into further halves, until the atomic (single element) subarray is
+            reached, and further division is not possible.</li>
+    </p>
+    <p>
+        <li>Start combining the elements again using merge process.</li>
+    </p>
+    <p>
+        <li>Base Case: The recursion stops when there is only one element left in the sub-array, as a single element is
+            already sorted.</li>
+    </p>
+
+    <h2>Code:</h2>
+    <div class="container">
+        <div class="content">
+            <p>
+            <pre>
+// C++ program to implement Quick Sort
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int partition(vector<int>& arr, int low, int high) {
+    // Choose the pivot
+    int pivot = arr[high];
+  
+    // Index of smaller element and indicates 
+    // the right position of pivot found so far
+    int i = low - 1;
+
+    // Traverse arr[low..high] and move all smaller
+    // elements on left side. Elements from low to 
+    // i are smaller after every iteration
+    for (int j = low; j <= high - 1; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(arr[i], arr[j]);
+        }
+    }
+    
+    // Move pivot after smaller elements and
+    // return its position
+    swap(arr[i + 1], arr[high]);  
+    return i + 1;
+}
+// The QuickSort function implementation
+void qucikSort(vector&lt;int&gt; & arr, int low, int high) {
+    if (low < high) {
+      
+        // pi is the partition return index of pivot
+        int pi = partition(arr, low, high);
+
+        // Recursion calls for smaller elements
+        // and greater or equals elements
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+int main() {
+    vector&lt;int&gt; arr = {10, 7, 8, 9, 1, 5};
+    int n = arr.size();
+    quickSort(arr, 0, n - 1);
+  
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
+
+    </pre>
+            </p>
+        </div>
+    </div>
+
+    <h3>Output</h3>
+    <pre>
+        Sorted vector : 1 5 7 8 9 10 
+    </pre>
+
+    <h3>Complexity Analysis</h3>
+    <p>Time Complexity: </p>
+    <p>
+        <li>Best Case: (Ω(n log n)), Occurs when the pivot element divides the array into two equal halves.</li>
+    </p>
+    <p>
+        <li>Average Case (θ(n log n)), On average, the pivot divides the array into two parts, but not necessarily
+            equal.</li>
+    </p>
+    <p>
+        <li>Worst Case: (O(n²)), Occurs when the smallest or largest element is always chosen as the pivot (e.g., sorted
+            arrays).
+        </li>
+    </p>
+
+    <p>Auxiliary Space: O(n),due to recursive call stack</p>
+
+    <h3>Video Tutorial</h3>
+    <div class="play">
+        <iframe width="1000" height="500" src="https://www.youtube.com/embed/Vtckgz38QHs?si=vM_VLQC2gS7XK9ht"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+</body>
+
+</html>

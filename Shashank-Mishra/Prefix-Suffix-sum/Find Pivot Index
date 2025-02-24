@@ -1,0 +1,25 @@
+class Solution {
+    public int pivotIndex(int[] nums) {
+        int n =nums.length;
+        int suffixSum []= new int[n];
+        for(int i=1;i<n;i++)
+        {
+            nums[i] += nums[i-1];
+        }
+        suffixSum[0]=nums[n-1];
+        for(int i=1;i<n;i++)
+        {
+            suffixSum[i]=nums[n-1] - nums[i-1];
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(suffixSum[i]==nums[i])
+            {
+                return i;
+            }
+        }
+        return -1;
+
+        
+    }
+}

@@ -1,0 +1,38 @@
+class Solution {
+    public long maxRunTime(int n, int[] batteries) {
+        long min = Integer.MAX_VALUE;
+        long max = 0;
+
+        long mid = 0;
+        
+    
+        for( int battery : batteries){
+            max += battery;
+            min = Math.min(min , battery);
+        }
+        
+
+        while(min <= max){
+            mid = (max + min)/2;
+            long maxTime = 0;
+            
+            for(int i = 0; i< batteries.length; i++){
+                if(batteries[i] < mid){
+                    maxTime += batteries[i];
+                }
+                else{
+                    maxTime += mid;
+                }
+            }
+            if((mid * n) <= maxTime){
+                min = mid + 1;
+            }
+            else{
+                max = mid - 1;
+            }
+        }
+
+        return max;
+
+    }
+}
