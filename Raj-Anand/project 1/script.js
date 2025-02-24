@@ -88,7 +88,7 @@ function Animate(moves) {
     
     
     showBars(move);
-    setTimeout(() => Animate(moves), 50);
+    setTimeout(() => Animate(moves), speed);
 }
 
 function bubbleSort(arr) {
@@ -162,8 +162,8 @@ function mergeSort(arr) {
 
     function merge(arr) {
         if (arr.length <= 1) return arr;
-        const mid = Math.floor(arr.length / 2);
-        return merge(merge(arr.slice(0, mid)), merge(arr.slice(mid)));
+            const mid = Math.floor(arr.length/ 2);
+            return merge(merge(arr.slice(0, mid)),merge(arr.slice(mid)));
     }
 
     merge(arr);
@@ -171,9 +171,8 @@ function mergeSort(arr) {
 }
 
 // Quick Sort
-function quickSort(arr, low, high) {
-    const moves = [];
-    if (low < high) {
+function quickSort(arr, low, high, moves =[]) {
+    if (low < high){
         const pivot = arr[high];
         let i = low - 1;
         for (let j = low; j < high; j++) {
@@ -187,13 +186,11 @@ function quickSort(arr, low, high) {
         [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
         moves.push({ indices: [i + 1, high], type: "swap" });
 
-        quickSort(arr, low, i);
-        quickSort(arr, i + 2, high);
+        quickSort(arr, low, i, moves);
+        quickSort(arr, i +2, high, moves);
     }
     return moves;
 }
-
-
 function showBars(move) {
     container.innerHTML = "";
     for (let i = 0; i < array.length; i++) {
