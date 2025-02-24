@@ -96,7 +96,8 @@ Space Complexity: O(logn)
 
 <h4>Use Case:</h4> <p>Often preferred due to its high efficiency.</p>
 <br>
-<img src="sortingvisualiser.png" alt="sorting visualizer">
+<img src="![image](https://github.com/user-attachments/assets/c9dbb30f-086e-4f97-a2d0-263f636640dd)
+" alt="sorting visualizer">
 
 <h2>Project Features</h2>
 <br>
