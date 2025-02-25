@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f0f2f5, #cfd9df);
+  color: #333;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Button styling */
+button {
+  background-color: #a137bc;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: #9d43bb;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="range"],
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="range"]:focus,
+select:focus {
+  border-color: #781798;
+}
+
+/* Card style for the visualizer */
+.visualizer-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* Controls container */
+.controls-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Statistics panel */
+.statistics-panel {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+/* Progress bar */
+.progress-container {
+  width: 100%;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  height: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #992ddc, #9e25d5);
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+/* Bars container */
+.bar-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  height: 300px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.bar {
+  width: 10px;
+  transition: height 0.2s ease, background-color 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bar-container {
+    height: 200px;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

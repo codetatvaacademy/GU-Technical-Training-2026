@@ -1,0 +1,149 @@
+/* 🌙 Dark Theme Global Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212; /* Dark background */
+  color: rgb(48, 41, 41); /* Ensure text remains white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* 🔲 Main Visualizer Container */
+.visualizer-card {
+  background: #1e1e1e; /* Dark Gray */
+  color: rgb(35, 29, 29); /* Ensure text remains white */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* 🎛 Controls Container */
+.controls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+/* 🔘 Buttons */
+.button {
+  background-color: #7d0f93; /* Purple */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #d076e4; /* Orange */
+}
+
+.button:disabled {
+  background-color: #b4bdc2; /* Gray */
+  cursor: not-allowed;
+}
+
+/* 🔲 Inputs & Select */
+.input, .select {
+  padding: 8px;
+  background-color: #444546; /* Dark gray input */
+  color: rgb(248, 241, 241);
+  border: 2px solid #bdccc0;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.input:focus, .select:focus {
+  outline: none;
+  border-color: #80338d;
+  box-shadow: 0px 0px 5px rgba(190, 59, 220, 0.7);
+}
+
+/* 📊 Statistics Panel */
+.statistics-panel {
+  display: flex;
+  background: #2c2c2c;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.statistics-panel span {
+  font-weight: bold;
+  color: #ccc2e4; /* Purple-White */
+}
+
+/* 📈 Progress Bar */
+.progress-container {
+  height: 8px;
+  background-color: #b726c7;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #9930d2; /* Purple */
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+/* 📦 Bar Container */
+.bar-container {
+  display: flex;
+  color: #36383b;
+  align-items: flex-end;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+  border: 1px solid #555;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* 📊 Individual Sorting Bars */
+.bar {
+  width: 25px;
+  margin: 2px;
+  border-radius: 3px;
+  background-color: #555;
+  transition: background-color 0.3s, height 0.3s;
+}
+
+/* 🔄 Sorting Effects */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.bar.swapping {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* 🌟 Sorting Colors */
+.compare {
+  background-color: #f39c12 !important; /* Orange */
+}
+
+.swap {
+  background-color: #27ae60 !important; /* Green */
+}
+
+.sorted {
+  background-color: #2ecc71 !important; /* Bright Green */
+}
