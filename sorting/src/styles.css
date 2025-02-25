@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dark-mode {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #16a34a;
+  margin-bottom: 20px;
+}
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin: 5px; /* Added spacing between buttons */
+}
+#randomize { background: #3b82f6; color: white; }
+#randomize:hover { background: #2563eb; }
+.sort-button { background: #22c55e; color: white; }
+.sort-button:hover { background: #15803d; }
+#start { background: #f97316; color: white; }
+#start:hover { background: #ea580c; }
+#pause { background: #facc15; color: black; }
+#pause:hover { background: #eab308; }
+#reset { background: #ef4444; color: white; }
+#reset:hover { background: #dc2626; }
+#array-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 300px;
+  width: 80%;
+  background: white;
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  margin: auto; 
+  
+}
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.bar {
+  width: 4%;
+  margin: 2px;
+  background: #3b82f6;
+  display: inline-block;
+  max-height: 300px;
+}
+.bar-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 4px;
+  color: #111827;
+}
+#dark-mode-toggle {
+  margin-top: 20px;
+  background: #374151;
+  color: white;
+}
+#dark-mode-toggle:hover { background: #1f2937; }
+.dark-mode #array-container {
+  background: #1f2937;
+  border-color: #374151;
+}
+.dark-mode .bar {
+  background: #60a5fa;
+}
+.dark-mode button {
+  background: #4b5563;
+  color: white;
+}
+.dark-mode button:hover { background: #374151; }
