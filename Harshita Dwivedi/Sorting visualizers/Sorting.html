@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="Sorting.css">
+</head>
+<body>
+    <h1>Sorting Visualizer</h1>
+
+    <div class="Array">
+        <p>Enter numbers separated by commas:</p>
+        <input type="text" id="ArrayInput" placeholder="e.g., 5,2,9,1,7">
+        <button id="BuildArray">Create</button>
+    </div>
+
+    <div class="navbar">
+        <span class="option">
+            <select id="Algorithm">
+                <option value="0">Choose Algorithm</option>
+                <option value="1">Bubble Sort</option>
+                <option value="2">Selection Sort</option>
+                <option value="3">Insertion Sort</option>
+                <option value="4">Merge Sort</option>
+                <option value="5">Quick Sort</option>
+            </select>
+            <button id="SortBtn">Sort</button>
+        </span>
+    </div>
+
+
+    <div class="Bars" id="Bars"></div>
+    
+    <footer>
+        <div class="color-container">
+            <div class="color-box">
+                <div class="color" id="yellow"></div>
+                <div class="color-label">Comparing</div>
+            </div>
+            <div class="color-box">
+                <div class="color" id="red"></div>
+                <div class="color-label">Swapping</div>
+            </div>
+            <div class="color-box">
+                <div class="color" id="green"></div>
+                <div class="color-label">Sorting</div>
+            </div>
+            <div class="color-box">
+                <div class="color" id="white"></div>
+                <div class="color-label">Default</div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="Sorting.js"></script>
+</body>
+</html>
