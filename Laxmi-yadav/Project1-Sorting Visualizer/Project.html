@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting DSA Algorithm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="input-section">
+        <label for="arraySize">Enter array size:</label>
+        <input type="number" id="arraySize" min="1">
+        <button id="createArrayBtn">Create Array</button>
+        <div id="arrayInputContainer" style="display: none;">
+            <label for="arrayElements">Enter array elements (separated by commas):</label>
+            <input type="text" id="arrayElements">
+            <button id="sortArrayBtn">Sort Array</button>
+        </div>
+    </div>
+
+    <div class="algorithm-section">
+        <button id="bubbleSortBtn">Bubble Sort</button>
+        <button id="selectionSortBtn">Selection Sort</button>
+        <button id="mergeSortBtn">Merge Sort</button>
+        <button id="quickSortBtn">Quick Sort</button>
+        <button id="insertionSortBtn">Insertion Sort</button>
+    </div>
+
+    <div class="parentDiv"></div>
+    <div class="buttons-container">
+        <button class="startbtn">Start</button>
+        <button class="stopbtn">Stop</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

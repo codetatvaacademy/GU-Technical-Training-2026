@@ -1,0 +1,200 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #1a2a6c, #b21f1f, #fdbb2d);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+    overflow-x: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1400px; /* Increased max-width */
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.input-section {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Increased gap */
+}
+
+.input-section label {
+    color: #eee;
+    font-weight: 500;
+    font-size: 18px; /* Larger font size */
+}
+
+.input-section input[type="number"],
+.input-section input[type="text"] {
+    padding: 12px; /* Increased padding */
+    border: 1px solid #666;
+    border-radius: 8px; /* More rounded corners */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eee;
+    font-size: 18px; /* Larger font size */
+    transition: border-color 0.3s ease;
+    width: 150px; /* Set a specific width */
+}
+
+.input-section input:focus {
+    outline: none;
+    border-color: #61afef;
+    box-shadow: 0 0 5px rgba(97, 175, 239, 0.5);
+}
+
+.input-section button {
+    padding: 12px 24px; /* Increased padding */
+    background-color: #61afef;
+    color: white;
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input-section button:hover {
+    background-color: #5294e2;
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+#arrayInputContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Increased gap */
+}
+
+.algorithm-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px; /* Increased gap */
+}
+
+.algorithm-section button {
+    padding: 12px 24px; /* Increased padding */
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.algorithm-section button:hover {
+    background-color: #d35400;
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.parentDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 30px; /* Increased padding */
+    margin-top: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+}
+
+.innerDiv {
+    width: 50px; /* Increased width */
+    height: 300px; /* Increased height */
+    margin: 8px; /* Increased margin */
+    background-color: #61afef;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 8px 8px 0 0; /* More rounded corners */
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.innerDiv:hover {
+    transform: translateY(-5px); /* More pronounced lift on hover */
+}
+
+.innerDiv .bar {
+    width: 100%;
+    background-color: inherit;
+}
+
+.innerDiv div:not(.bar) {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px; /* Larger font size */
+    font-weight: 500;
+}
+
+.buttons-container {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px; /* Increased gap */
+}
+
+.startbtn, .stopbtn {
+    padding: 14px 28px; /* Increased padding */
+    background-color: #61afef;
+    color: white;
+    border: none;
+    border-radius: 10px; /* More rounded corners */
+    font-size: 20px; /* Larger font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.startbtn:hover {
+    background-color: #5294e2;
+    transform: scale(1.05);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.3);
+}
+
+.stopbtn {
+    background-color: #e06c75;
+}
+
+.stopbtn:hover {
+    background-color: #d1575f;
+    transform: scale(1.05);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.3);
+}
+
+.innerDiv.comparing {
+    background-color: #f0c808;
+}
+
+.innerDiv.swapping {
+    background-color: #ff9800;
+}
+
+.innerDiv.sorted {
+    background-color: #4caf50;
+}
