@@ -1,2 +1,18 @@
-**"Sorting Simplified: Watch Algorithms in Action! 🚀"**    
-Experience the magic of sorting with our interactive **Sorting Visualizer**!   Watch **Bubble, Selection, Insertion, Merge, and Quick Sort** come to life with real-time animations. Customize your experience by choosing the number of elements, adjusting the speed, and pausing or resuming at any time.   Compare sorting speeds and understand time complexities effortlessly. Perfect for students, developers, and algorithm enthusiasts—because sorting is not just a concept, it's a visual experience! 🎨✨  
+# Algorithm Visualizer React
+
+## 📝 Demo
+[Live Demo](https://jyothika-sorting-algorithm-visualizer.onrender.com/)
+
+A simple React-based Algorithm Visualizer to help understand various algorithms through interactive animations.
+
+## 📌 Description
+Algorithm Visualizer React is a tool that provides visual representations of different algorithms, making it easier to comprehend their working principles. This project is built using React and allows users to see step-by-step execution of sorting, searching, and other algorithms.
+
+## 🚀 Features
+- Visualize sorting algorithms like Bubble Sort, Merge Sort, Quick Sort, etc.
+- Step-by-step execution with adjustable speed
+- Interactive UI for user engagement
+- Easy-to-use interface
+
+## 📜 License
+This project is licensed under the MIT License.
