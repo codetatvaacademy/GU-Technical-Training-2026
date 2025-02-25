@@ -81,7 +81,7 @@ Before you begin, ensure you have the following software installed on your Windo
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/anyaaseth08/GU-Technical-Training-2026.git
-    cd sorting-visualizer/backend
+    cd Sorting Visualizer Project/server
     ```
 
 2.  **Build the project using Maven:**
@@ -98,7 +98,7 @@ Before you begin, ensure you have the following software installed on your Windo
 
 1.  **Navigate to the frontend directory:**
     ```bash
-    cd ../frontend
+    cd ../sorting
     ```
 
 2.  **Install dependencies:**
