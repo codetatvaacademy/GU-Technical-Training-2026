@@ -1,0 +1,208 @@
+/* General Styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Full-screen container */
+.full-screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #f5f5f5;
+  color: black;
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Mode Toggle Button */
+.toggle-mode {
+  padding: 8px 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.toggle-mode:hover {
+  background-color: #0056b3;
+}
+
+/* Control Buttons */
+.btn {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Input Boxes */
+.input-box {
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Sorting Bar Container */
+.bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  width: 80%;
+  margin: 20px 0;
+  border: 2px solid #ddd;
+  padding: 10px;
+}
+
+/* Sorting Bars */
+.bar {
+  width: 30px;
+  margin: 3px;
+  background-color: #007bff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  transition: height 0.3s ease-in-out;
+}
+
+/* Highlighted Bars */
+.highlight {
+  background-color: #ff4500 !important;
+}
+
+/* Sorting Steps Box */
+.steps {
+  width: 50%;
+  height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.steps ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.steps li {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* Additional Styling for Sorting Algorithms */
+.bubble-sort {
+  background-color: #ff6347;
+}
+
+.selection-sort {
+  background-color: #4682b4;
+}
+
+.merge-sort {
+  background-color: #32cd32;
+}
+
+.quick-sort {
+  background-color: #ffcc00;
+}
+
+.counting-sort {
+  background-color: #8a2be2;
+}
+
+.insertion-sort {
+  background-color: #ff1493;
+}
+.steps-box {
+  max-height: 200px; /* Fixed height for the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 2px solid #007bff;
+  background: white;
+  text-align: left;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 80%; /* Adjust width as needed */
+}
+/* Dark Mode Styles for Steps Container */
+.dark-mode .steps-box {
+  background: #1e1e1e; /* Dark background */
+  border-color: #555; /* Darker border */
+}
+
+.steps-box h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.steps-box p {
+  margin: 5px 0;
+  font-size: 14px;
+  padding: 5px;
+  background-color: #f0f0f0; /* Light background for steps */
+  border-radius: 3px;
+  color: #333; /* Dark text for light mode */
+}
+
+/* Dark Mode Styles for Steps Text */
+.dark-mode .steps-box p {
+  background-color: #333; /* Dark background for steps */
+  color: #f0f0f0; /* Light text for dark mode */
+}
+.steps-box p:last-child {
+  background-color: #007bff;
+  color: white;
+}
+
