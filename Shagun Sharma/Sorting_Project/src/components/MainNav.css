@@ -1,0 +1,92 @@
+/* 🌙 Dark Glassmorphism Navbar */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(156, 67, 186, 0.651); /* Semi-transparent blue */
+  backdrop-filter: blur(10px); /* Glass effect */
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 1rem auto;
+  box-shadow: 0 4px 10px rgba(63, 14, 74, 0.574);
+  border: 2px solid rgba(121, 58, 158, 0.2);
+}
+
+/* 🔷 Logo Styling */
+.main-nav__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.main-nav__logo:hover {
+  transform: scale(1.1);
+}
+
+/* 📌 Navigation Links */
+.main-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.main-nav__link:hover {
+  color: #ecf0f1;
+  transform: scale(1.1);
+}
+
+/* 💬 Greeting Text */
+.main-nav__greeting {
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 🚀 Logout Button */
+.main-nav__logout {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.main-nav__logout:hover {
+  background: linear-gradient(135deg, #c0392b, #a83227);
+  transform: translateY(-3px);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .main-nav__links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .main-nav__logout {
+    margin-top: 10px;
+  }
+}

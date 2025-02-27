@@ -1,0 +1,17 @@
+/* Reset & Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+code {
+  font-family: Consolas, 'Courier New', monospace;
+  color: cyan;
+}

@@ -1,0 +1,13 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    padding:2%;
+    background:white;
+    height: 86vh;
+    padding-top: 0.5%;
+  }
+  body.dark-mode main {
+    background-color: #3D3D3D; 
+    color: white;
+}

@@ -1,0 +1,46 @@
+#algorithm-container::-webkit-scrollbar{
+    width:8px;
+    color: gray;
+    background-color: #f1f1f1;
+}
+
+#algorithm-container{
+    height: 25vh;
+}
+#algorithm-container::-webkit-scrollbar-thumb {
+    background-color: gray; 
+    border-radius: 4px; 
+}
+
+#algorithm-container {
+    max-height: 24vh;
+    max-width: 48vw;
+    overflow-y: hidden;
+    overflow-x: hidden; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    scrollbar-width: thin; 
+    scroll-padding: 10px;
+    white-space: nowrap; 
+}
+#algorithm-container:hover{
+    overflow-x:scroll;
+    overflow-y: scroll;
+    scrollbar-color:rgb(232, 235, 224) white;
+}
+
+body.dark-mode #algorithm-container {
+    background-color: black;
+    color: rgba(255, 255, 255, 0.87);
+}
+body.dark-mode #algorithm-container:hover {
+    scrollbar-color: rgba(255, 255, 255, 0.5) #333333; 
+}
+
+pre{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: normal;
+}
+

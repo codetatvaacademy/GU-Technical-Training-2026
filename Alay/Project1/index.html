@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const SortingVisualizer = () => {
+            const [array, setArray] = useState([]);
+            const [size, setSize] = useState(50);
+            const [speed, setSpeed] = useState(100);
+
+            useEffect(() => {
+                generateNewArray();
+            }, [size]);
+
+            const generateNewArray = () => {
+                setArray(Array.from({ length: size }, () => Math.floor(Math.random() * 300) + 10));
+            };
+            return (
+                <div className="d-flex flex-column vh-100">
+                    <header>
+                        <h2>LazySort</h2>
+                        <h6>Sorting Visualizer</h6>
+                    </header>
+
+                    <div className="main-container">
+                        <div className="controls-container">
+                            <button className="btn-white" onClick={generateNewArray}>New Array</button>
+
+                            <div>
+                                <label className="range-label">Size:</label>
+                                <input type="range" min="5" max="100" value={size} onChange={(e) => setSize(+e.target.value)} className="form-range" />
+                            </div>
+                            <div>
+                                <label className="range-label">Speed:</label>
+                                <input type="range" min="20" max="300" value={speed} onChange={(e) => setSpeed(+e.target.value)} className="form-range" />
+                            </div>
+
+                            {["Bubble", "Selection", "Insertion", "Merge", "Quick"].map(sort => (
+                                <button key={sort} className="btn-outline-white">{sort} Sort</button>
+                            ))}
+                        </div>
+
+                        <div className="visualizer-container">
+                            <div className="bars-container">
+                                {array.map((value, idx) => {
+                                    const barWidth = Math.max(8, (window.innerWidth - 250) / array.length); // fills the bar width dynamically
+                                    return (
+                                        <div key={idx} className="bar" style={{ height: `${value}px`, width: `${barWidth}px`, margin: "0 3px" }}></div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <p>&copy; 2025 Sorting Visualizer</p>
+                    </footer>
+                </div>
+            );
+        };
+        ReactDOM.render(<SortingVisualizer/>, document.getElementById('root'));
+    </script>
+</body>
+</html>
