@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap");
+
+h1, p {
+    font-family: "Roboto Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    background-color: black; 
+    color: white; 
+}
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+
+.btns.menuToggle ion-icon {
+    font-size: 3em;
+    margin-top: -13px;
+}
+
+.btns ion-icon:nth-child(2) {
+    display: none;
+}
+
+ .btns.active ion-icon:nth-child(2) {
+    display: block;
+}
+
+.btns.active ion-icon:nth-child(1) {
+    display: none;
+} 
+
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .heading h4 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 3;
+    font-size: 6.8rem;
+    color: cyan;
+    text-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+.main .heading h3 {
+    position: relative;
+    z-index: 3;
+    font-size: 8.5rem;
+    color: cyan;
+    text-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+.navigation {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black; 
+    z-index: 4;
+    transition: 0.5s;
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation li a {
+    display: inline-flex;
+    margin: 5px 0;
+    font-size: 2.25em;
+    text-decoration: none;
+    color: white; 
+    padding: 5px 20px;
+    border-radius: 40px;
+}
+
+.navigation li a:hover {
+    background: black; 
+    color: black; 
+} 
+
+
