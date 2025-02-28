@@ -1,0 +1,26 @@
+class Solution {
+    public int maxScore(String s) {
+        int n = s.length();
+        int maxscore = Integer.MIN_VALUE;
+
+        int ones = 0;
+        for (char c : s.toCharArray()) {
+            if (c == '1') {
+            ones++;
+            }
+        }
+        int zeros = 0;
+        int totalones = ones;
+
+        for (int i = 0; i < n - 1; i++) {
+            if (s.charAt(i) == '0') {
+                zeros++;
+            } else {
+                totalones--;
+            }
+            int currscore = zeros + totalones;
+            maxscore = Math.max(maxscore, currscore);
+        }
+        return maxscore;
+    }
+}
