@@ -52,3 +52,11 @@ class SpiralMatrix{
         System.out.println("The elements of the matrix in spiral order is: " + spiralOrder(matrix));
     }
 }
+
+
+//time complexity of the function is : O(m * n)
+//space complexity of the function is : O(m * n)
+
+
+//time complexity of the whole program is : O(m * n)
+//space complexity of the whole program is : O(m * n)

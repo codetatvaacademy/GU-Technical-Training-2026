@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -35,3 +36,8 @@ class CreateTargetArrayintheGivenOrder{
          System.out.println("The resultant list is " + Arrays.toString(createTargetArray(nums, index)));
      }
 }
+//time complexity of the function is : O(n)
+//space complexity of the function is : O(n)
+
+//time complexity of the whole program is : O(n) + O(n)
+//space complexity of the whole program is : O(n) + O(n)

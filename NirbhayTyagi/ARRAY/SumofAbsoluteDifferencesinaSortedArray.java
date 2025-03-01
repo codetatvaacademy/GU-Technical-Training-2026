@@ -27,3 +27,9 @@ class SumofAbsoluteDifferencesinaSortedArray{
         System.out.println("The result array is " + Arrays.toString(getSumAbsoluteDifferences(nums)));
     }
 }
+
+//time complexity of the function is : O(n)
+//space complexity of the function is : O(n)
+
+//time complexity of the whole program is : O(n) + O(n)
+//space complexity of the whole program is : O(n) + O(n)
