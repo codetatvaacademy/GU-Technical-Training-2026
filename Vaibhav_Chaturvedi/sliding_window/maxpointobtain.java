@@ -1,3 +1,4 @@
+package sliding_window;
  
 class maxpointobtain{
     public int maxScore(int[] cardPoints, int k) {
