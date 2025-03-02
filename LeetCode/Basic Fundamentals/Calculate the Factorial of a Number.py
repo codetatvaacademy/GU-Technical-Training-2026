@@ -1,0 +1,8 @@
+# Taking a number as input from the user and printing its factorial
+num = int(input("Enter a number: "))
+
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+
+print("The factorial of", num, "is:", factorial)
