@@ -32,3 +32,6 @@
 - 4. Pause Button: You can use this button to pause the sorting at any point and understand it.
 - 5. Reset Button: You can use this button to reset the sorted data to its default format.
 - 6. Start Button: You can use this button to start sorting the data to again after resetting.
+
+### Site deploy link (netlify) -
+Deployment Link -> https://sortify-sar.netlify.app/
