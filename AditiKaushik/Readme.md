@@ -6,4 +6,6 @@ LeetCode: https://leetcode.com/u/Aditi_Kaushik
 
 LinkedIn: https://www.linkedin.com/in/theaditikaushik
 
+X : https://x.com/AditiDecodes
+
 Resume: https://drive.google.com/file/d/1TyRuYICa0D4neWMkT0gOvVxKwcjHz4tF/view?usp=sharing
