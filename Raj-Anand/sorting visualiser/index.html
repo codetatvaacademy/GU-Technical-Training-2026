@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+     <script src="https://cdn.tailwindcss.com"></script> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center p-5">
+
+    <h1 class="text-3xl font-bold mb-5">Sorting Visualizer</h1>
+
+    <div id="container" class="flex items-end justify-center gap-1 h-64 w-full max-w-4xl bg-gray-800 p-2 rounded-md"></div>
+
+    <div class="mt-5 flex gap-3">
+        <select id="algorithm-select" class="px-4 py-2 bg-gray-700 text-white rounded-md">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+        </select>
+        <button class="px-4 py-2 bg-green-500 rounded-md" onclick="sortArray()">Sort</button>
+        <button class="px-4 py-2 bg-green-500 rounded-md" onclick="pause()">pause</button>
+        <button class="px-4 py-2 bg-red-500 rounded-md" onclick="reset()">Reset</button>
+    </div>
+
+    <div class="flex items-center space-x-2">
+        <label class="text-lg font-medium">Dark Mode:</label>
+        <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="theme-toggle" class="sr-only peer">
+             <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 
+                        dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 
+                        peer-checked:after:translate-x-5 peer-checked:after:border-white 
+                        after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white 
+                        after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 
+                        after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+            </div> 
+        </label>
+    </div>
+    
+    <div class="mt-5 flex flex-col items-center gap-2">
+        <label for="arraySize" class="text-lg">Array Size:</label>
+        <input type="range" id="arraySize" min="10" max="100" value="22" class="w-64">
+        
+        <label for="speed" class="text-lg">Speed:</label>
+        <input type="range" id="speed" min="10" max="500" value="50" class="w-64">
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
