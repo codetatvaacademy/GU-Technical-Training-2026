@@ -25,5 +25,12 @@ public class BuildArrayfromPermutation{
             nums[i] = sc.nextInt();
         }
         System.out.println("The answer array is  " + Arrays.toString(buildArray(nums)));
+        sc.close();
     }
 }
+
+//time complexity of the function : O(n)
+//space complexity of the function : O(n)
+
+//time complexity of the whole program : O(n) + O(n)
+//space complexity of the whole program : O(n) + O(n)

@@ -24,6 +24,12 @@ public class ConcatenationOfArray{
         for(int i = 0; i < n; i++){
              nums[i] = sc.nextInt(); 
         }
-        System.out.println(Arrays.toString(getConcatenation(nums)));
+        System.out.println(Arrays.toString(getConcatenation(nums)));//Arrays.toString used only for printing 1D array
     }
 }
+
+//time complexity of the function = O(n);
+//space complexity of the function  = O(n);
+
+//time complexity of the whole program = O(n)+O(n);
+//space complexity of the whole program   = O(n)+O(n);

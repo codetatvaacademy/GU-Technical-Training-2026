@@ -30,3 +30,9 @@ class MatrixDiagonalSum{
         System.out.println("The nsum of the diagonals of the matrix is: " + diagonalSum(mat));
     }
 }
+
+//time complexity of the function is : O(m) as m==n
+//space complexity of the function is : O(1) 
+
+//time complexity of the whole program is : O(m * n) 
+//space complexity of the whole program is : O(m * n) 
