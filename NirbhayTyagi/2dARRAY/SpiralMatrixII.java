@@ -49,3 +49,9 @@ class SpiralMatrixII{
         }
     }
 }
+
+//time complexity of the function is : O(n^2)
+//space complexity of the function is : O(n^2)
+
+//time complexity of the whole program is : O(n^2)
+//space complexity of the whole program is : O(n^2)

@@ -1,4 +1,5 @@
-//WAP to take input rate & quantity and calculate the amount. Finally print net amount to be paid after allowing 15% discount if amount exceeds 2000 rs.
+//WAP to take input rate & quantity and calculate the amount.
+//Finally print net amount to be paid after allowing 15% discount if amount exceeds 2000 rs.
 
 import java.util.Scanner;
 
