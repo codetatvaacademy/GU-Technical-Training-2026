@@ -9,12 +9,13 @@ public class PrintingSecondLargestNumber {
         int number2=sc.nextInt();
         System.out.println("Enter 3rd number:");
         int number3=sc.nextInt();
-        //if(number1<number2 && number2<number3 && number1<number3){
-           // System.out.println("Number 2 is greater.");;
-        //}
-         if(number1<number2 && number2>number3) {
-            System.out.println("number 2 is largest");
+        // int largest =0;
+        int SecondLargest=0;
+        if(number1<number2 && number2>number3) {
+            
         }
+        
+        sc.close();
         
     }
     

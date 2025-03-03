@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Allow direct access to index.html
+  RewriteRule ^index\.html$ - [L]
+
+  # Redirect all non-existing files or directories to index.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /index.html [L,QSA]
+</IfModule>

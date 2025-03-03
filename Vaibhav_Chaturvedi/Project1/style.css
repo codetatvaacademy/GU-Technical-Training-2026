@@ -1,0 +1,147 @@
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+
+.bar {
+    width: 20px;
+    margin: 2px;
+    background: #4CAF50;
+    transition: height 0.2s ease, background 0.2s ease;
+    border-radius: 4px;
+}
+
+
+.bar.swap {
+    background: #e74c3c !important; 
+}
+
+.bar.compare {
+    background: #f1c40f !important; 
+}
+
+
+button {
+    background: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #1f618d;
+}
+
+
+.speed-control {
+    margin-top: 15px;
+}
+
+.speed-control label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#speed {
+    width: 150px;
+    cursor: pointer;
+}
+
+ */
+
+
+ 
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1e1e2f;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #f8b400;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 400px;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    background-color: violet;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.bar {
+    width: 20px;
+    margin: 2px;
+    background-color: #4caf50;
+    transition: height 0.2s, background-color 0.2s;
+}
+
+.bar.sorted {
+    background-color: #f44336;
+}
+.controls {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1rem;
+    color: white;
+    background-color: #f8b400;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+button:hover {
+    background-color:orange;
+}
+.settings {
+    margin: 20px;
+}
+input[type="range"] {
+    width: 200px;
+    margin: 10px;
+}
+label {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}  

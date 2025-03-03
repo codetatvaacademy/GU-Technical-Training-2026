@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="merge.css">
+</head>
+
+<body>
+    <h1>Merge Sort Algorithm</h1>
+    <p>Merge Sort is a comparison-based sorting algorithm that uses divide and conquer paradigm to sort the given
+        dataset. It divides the dataset into two halves, calls itself for these two halves, and then it merges the two
+        sorted halves.</p>
+
+    <p>Merge sort algorithm divides the given array into smaller subarrays and then uses the merge() process for merging
+        two halves. It is the key process of merge sort that assumes that given two arrays are sorted and merges the two
+        sorted sub-arrays into one sorted subarray.
+    </p>
+    <p>
+        <li>First calculate the midpoint of the array.
+        </li>
+    </p>
+    <p>
+        <li>Then divide the whole array into equal halves using this midpoint.</li>
+    </p>
+    <p>
+        <li>For both the subarrays, calculate the mid-point again.
+        </li>
+    </p>
+    <p>
+        <li>Further divide these two subarrays into further halves, until the atomic (single element) subarray is
+            reached, and further division is not possible.</li>
+    </p>
+    <p>
+        <li>Start combining the elements again using merge process.</li>
+    </p>
+    <p>
+        <li>In merge process, compare the element for each list and then combine them into another list in a sorted
+            manner.</li>
+    </p>
+
+    <h2>Code:</h2>
+    <div class="container">
+        <div class="content">
+            <p>
+            <pre>
+// C++ program to implement Selection Sort
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+// Merges two subarrays of vec.
+// First subarray is vec[left..mid]
+// Second subarray is vec[mid+1..right]
+void merge(vector&lt;int&gt;vec, int left, int mid, int right) {
+    int i, j, k;
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    // Create temporary vectors
+    vector<int> leftVec(n1), rightVec(n2);
+
+    // Copy data to temporary vectors
+    for (i = 0; i < n1; i++)
+        leftVec[i] = vec[left + i];
+    for (j = 0; j < n2; j++)
+        rightVec[j] = vec[mid + 1 + j];
+
+    // Merge the temporary vectors back into vec[left..right]
+    i = 0;
+    j = 0;
+    k = left;
+    while (i < n1 && j < n2) {
+        if (leftVec[i] <= rightVec[j]) {
+            vec[k] = leftVec[i];
+            i++;
+        } else {
+            vec[k] = rightVec[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy the remaining elements of leftVec[], if any
+    while (i < n1) {
+        vec[k] = leftVec[i];
+        i++;
+        k++;
+    }
+
+    // Copy the remaining elements of rightVec[], if any
+    while (j < n2) {
+        vec[k] = rightVec[j];
+        j++;
+        k++;
+    }
+}
+
+// The subarray to be sorted is in the index range [left..right]
+
+void mergeSort(vector&lt;int&gt; & vec, int left, int right) {
+    if (left < right) {
+      
+        // Calculate the midpoint
+        int mid = left + (right - left) / 2;
+
+        // Sort first and second halves
+        mergeSort(vec, left, mid);
+        mergeSort(vec, mid + 1, right);
+
+        // Merge the sorted halves
+        merge(vec, left, mid, right);
+    }
+}
+int main() {
+    vector&lt;int&gt; vec = {12, 11, 13, 5, 6, 7};
+    int n = vec.size();
+
+    // Sorting vec using mergesort
+    mergeSort(vec, 0, n - 1);
+
+    for (auto i: vec)
+        cout << i << " ";
+    return 0;
+}
+
+    </pre>
+            </p>
+        </div>
+    </div>
+
+    <h3>Output</h3>
+    <pre>
+        Sorted vector : 5 6 7 11 12 13
+    </pre>
+
+    <h3>Complexity Analysis</h3>
+    <p>Time Complexity: O(n log(n)) ,where n is the number of elements in the array. </p>
+
+    <p>Auxiliary Space: O(n), for storing the left and right subarray.</p>
+
+    <h3>Video Tutorial</h3>
+    <div class="play">
+
+        <iframe width="1000" height="500" src="https://www.youtube.com/embed/3j0SWDX4AtU?si=9_qAFNpfShPppyZm"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+</body>
+
+</html>

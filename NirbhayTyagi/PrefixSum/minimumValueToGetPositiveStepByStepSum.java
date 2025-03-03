@@ -1,5 +1,3 @@
-package NirbhayTyagi.PrefixSum;
-
 import java.util.Scanner;
 
 class minimumValueToGetPositiveStepByStepSum{
@@ -28,6 +26,6 @@ class minimumValueToGetPositiveStepByStepSum{
             nums[i] = sc.nextInt();
         }
         System.out.print("Minimum Positive Value: " + minStartValue(nums));
-        sc.close();
+        
     }
 }

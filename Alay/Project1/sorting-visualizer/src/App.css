@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.App-header {
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.App-link {
+  color: cyan;
+  text-decoration: none;
+}
+
+.App-link:hover {
+  color: lightblue;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}

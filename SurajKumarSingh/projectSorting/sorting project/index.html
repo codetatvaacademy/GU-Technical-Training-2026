@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <!-- Header making  start -->
+
+    <h1 class="header">Sorting Algorithm Visualizer</h1>
+    <h1 class="header">
+        <span class="special">S</span><span class="normal">orting</span> 
+        <span class="special">A</span><span class="normal">lgorithm</span> 
+        <span class="special">V</span><span class="normal">isualizer</span>
+    </h1>
+
+    <!-- Header making end -->
+
+    <div class="boxes">
+
+        <!-- Complexity Displaying left Box Start -->
+
+        <div class="left">
+          <h2>Time Complexity</h2>
+           <div class="complexity-box">
+              <div class="Time-Complexity" id="worst-time">Worst Time Complexity: -</div>
+              <div class="Time-Complexity" id="average-time">Average Time Complexity: -</div>
+              <div class="Time-Complexity" id="best-time">Best Time Complexity: -</div>
+           </div>
+    
+           <h2>Space Complexity</h2>
+           <div class="complexity-box">
+           <div class="Space-Complexity" id="space-complexity">Space Complexity: -</div>
+           </div>
+        </div>
+
+        
+        <!-- Complexity Displaying left Box  End-->
+
+        <!-- Main processing middle Box start -->
+        <div class="middle">
+            <div id="array-container"></div>
+            <div class="input">
+                <input type="text" id="user-input" placeholder="Enter numbers -> 1,2,3,4..">
+                <button onclick="setUserArray()">Use Input</button>
+                <button onclick="generateArray()">Generate Random Array</button>
+            </div>
+        
+
+            <div class="sort">
+                <select id="sorting-method">
+                    <option value="" disabled selected>Select Sorting Algorithm</option>
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
+                <button onclick="startSorting()">Sort</button>
+                <button onclick="generateArray()">Restart</button>
+            </div>
+        
+            <!-- Speed Control -->
+            <div class="speed-control">
+                <label for="speed-slider">Sorting Speed:</label>
+                <input type="range" id="speed-slider" min="10" max="500" value="100" step="10">
+                <span id="speed-value">100ms</span>
+            </div>
+        </div>
+        <!-- Main processing middle Box  End-->
+
+        <!-- Algorithm Displaying Right Box  Start-->
+        <div class="right" >
+            <h2>Algorithm-Description</h2>
+            <h3 id="algorithm-description">Select any Algorithm from the Selectioin box to see Alorithm Description</h3>
+        </div>
+        <!-- Algorithm Displaying Right Box  End-->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

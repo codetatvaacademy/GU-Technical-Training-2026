@@ -1,0 +1,103 @@
+.container {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.controls-container {
+    background: #2c3e50;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.array-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 400px;
+    padding: 1rem;
+    background: #34495e;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+.array-bar {
+    width: 40px;
+    margin: 0 2px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bar-compare {
+    background: linear-gradient(145deg, #f1c40f, #f39c12);
+    transform: scale(1.1);
+}
+
+.bar-swap {
+    background: linear-gradient(145deg, #e74c3c, #c0392b);
+    transform: scale(1.1);
+}
+
+.bar-sorted {
+    background: linear-gradient(145deg, #2ecc71, #27ae60);
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.controls button:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+}
+
+.controls button:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.speed-control input[type="range"] {
+    width: 150px;
+    cursor: pointer;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 2rem auto;
+}

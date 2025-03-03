@@ -1,0 +1,11 @@
+class Solution {
+    public int minStartValue(int[] nums) {
+        int mintotalsum = 0; 
+        int currsum = 0; 
+        for (int num : nums) {
+            currsum += num;
+            mintotalsum = Math.min(mintotalsum, currsum);
+        }
+        return 1 - mintotalsum;
+    }
+}

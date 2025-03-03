@@ -1,0 +1,20 @@
+class Solution {
+    public int mySqrt(int x) {
+        long min = 1;
+        long max = x;
+        long mid = 0;
+
+        while(min <= max){
+            mid = (min+max)/2;
+
+            
+            if(mid*mid <= x){
+                min = mid + 1;
+            }
+            else{
+                max = mid - 1;
+            }
+        }
+        return (int)max;
+    }
+}

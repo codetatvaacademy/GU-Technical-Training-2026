@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <!-- Header making  start -->
+
+    <h1 class="header">Sorting Algorithm Visualizer</h1>
+    <h1 class="header">
+        <span class="special">S</span><span class="normal">orting</span> 
+        <span class="special">A</span><span class="normal">lgorithm</span> 
+        <span class="special">V</span><span class="normal">isualizer</span>
+    </h1>
+
+    <!-- Header making end -->
+
+    <!-- Main page Start -->
+
+    <div class="boxes">
+
+        <!-- Complexity Displaying left Box Start -->
+
+        <div class="left">
+          <h2>Time Complexity</h2>
+           <div class="complexity-box">
+              <div class="Time-Complexity" id="worst-time">Worst Time Complexity: -</div>
+              <div class="Time-Complexity" id="average-time">Average Time Complexity: -</div>
+              <div class="Time-Complexity" id="best-time">Best Time Complexity: -</div>
+           </div>
+    
+           <h2>Space Complexity</h2>
+           <div class="complexity-box">
+           <div class="Space-Complexity" id="space-complexity">Space Complexity: -</div>
+           </div>
+        </div>
+
+        
+        <!-- Complexity Displaying left Box  End-->
+
+        <!-- Main processing middle Box start -->
+        <div class="middle">
+            <div id="array-container"></div>
+            <div class="input">
+                <input type="text" id="user-input" placeholder="Enter numbers -> 1,2,3,4..">
+                <button onclick="setUserArray()">Use Input</button>
+                <button onclick="generateArray()">Generate Random Array</button>
+            </div>
+        
+
+            <div class="sort">
+                <select id="sorting-method">
+                    <option value="" disabled selected>Select Sorting Algorithm</option>
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
+                <button onclick="startSorting()">Sort</button>
+                <button onclick="generateArray()">Restart</button>
+            </div>
+        
+            <!-- Speed Control -->
+            <div class="speed-control">
+                <label for="speed-slider">Sorting Speed:</label>
+                <input type="range" id="speed-slider" min="10" max="500" value="100" step="10">
+                <span id="speed-value">100ms</span>
+            </div>
+        </div>
+        <!-- Main processing middle Box  End-->
+
+        <!-- Algorithm Displaying Right Box  Start-->
+        <div class="right" >
+            <h2>Algorithm-Description</h2>
+            <h3 id="algorithm-description">Select any Algorithm from the Selectioin box to see Alorithm Description</h3>
+        </div>
+        <!-- Algorithm Displaying Right Box  End-->
+    </div>
+
+    <!-- Brief Section Start -->
+    <div class="brief">
+        <div class="section">
+            <h3>Definition in Lemon term:</h3>
+            <div id="define">Select an Algorithm to display Definition in Lemon term.</div>
+        </div>
+    
+        <div class="section">
+            <h3>Facts:</h3>
+            <div id="facts">Select an Algorithm to display facts.</div>
+        </div>
+    
+        <div class="section">
+            <h3>Use case:</h3>
+            <div id="use">Select an Algorithm to display Use Cases.</div>
+        </div>
+    
+        <div class="section">
+            <h3>Limitations:</h3>
+            <div id="limitation">Select an Algorithm to display limitations.</div>
+        </div>
+    </div>
+    <!-- Main Page end -->
+
+    <!-- Footer Section Start -->
+<footer class="footer">
+    <div class="footer-container">
+        
+        <!-- Meet the Team Section -->
+        <div class="footer-header">
+            <h2 id="dynamic-text"></h2>
+            <p>Passionate developers dedicated to building innovative solutions</p>
+        </div>
+        
+        <div class="team-members">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <img src="Ashish.jpg" alt="Ashish Chauhan">
+                <h3>Ashish Chauhan</h3>
+                <p>Email: ac6100861@gmail.com</p>
+                <p>Contact: 9368362684</p>
+                <div class="social-links">
+                    <a href="https://github.com/Ashish-develper1010" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/ashish-chauhan-506b24251" target="_blank">LinkedIn</a>
+                    <a href="https://leetcode.com/u/Ashish_Developer1010/" target="_blank">Leetcode</a>
+                </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <img src="My_pic.jpg" alt="Gopal Kushwaha">
+                <h3>Gopal Kushwaha</h3>
+                <p>Email: kushwahagopal2003@gmail.com</p>
+                <p>Contact: 8933960163</p>
+                <div class="social-links">
+                    <a href="https://github.com/Gopalkushwaha1" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/gopalkushwaha07/" target="_blank">LinkedIn</a>
+                    <a href="https://leetcode.com/u/G0PAL07/" target="_blank">Leetcode</a>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <img src="Suraj.jpg" alt="Suraj Kumar">
+                <h3>Suraj Kumar Singh</h3>
+                <p>Email: itsuraj6392@gmail.com</p>
+                <p>Contact: 6392916409</p>
+                <div class="social-links">
+                    <a href="https://github.com/LuciferDev-09" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/suraj-kumar-singh-50209a2aa/" target="_blank">LinkedIn</a>
+                    <a href="https://leetcode.com/u/LuciferDev-09/" target="_blank">Leetcode</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <h4>Thank's For Visit Here </h4>
+    
+    <!-- Footer section end -->
+
+    <script src="script.js"></script>
+</body>
+</html>

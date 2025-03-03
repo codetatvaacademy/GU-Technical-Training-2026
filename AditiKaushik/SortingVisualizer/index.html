@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sorting Visualizer</h1>
+    <div class="user-input" id="userInput">
+        <label for="numElements">Enter number of elements:</label>
+        <input type="number
+        " id="numElements" min="1">
+        <br>
+        <label for="elements">Enter elements (comma-separated):</label>
+        <input type="text" id="elements">
+        <br>
+        <label for="sortType">Choose sorting technique:</label>
+        <select id="sortType">
+            <option value="select">Select sorting type</option>
+            <option value="bubbleSort">Bubble Sort</option>
+            <option value="selectionSort">Selection Sort</option>
+            <option value="insertionSort">Insertion Sort</option>
+            <option value="mergeSort">Merge Sort</option>
+            <option value="quickSort">Quick Sort</option>
+            <option value="countSort">Counting Sort</option>
+        </select>
+        <audio id ="audioMusic">
+            <source src ="horse.mp3">
+        </audio>
+        <br>
+        <button onclick="startSorting();bell()">Sort</button>
+    </div>
+
+    <div id="array-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

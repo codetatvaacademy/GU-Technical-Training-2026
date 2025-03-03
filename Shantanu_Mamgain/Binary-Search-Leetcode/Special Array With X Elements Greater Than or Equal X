@@ -1,0 +1,37 @@
+class Solution {
+   
+    public int specialArray(int[] nums) {
+        int min = 0;
+        int max = 0;
+        int mid = 0;
+
+        for(int num : nums) {
+            if(num > max){
+                max = num;
+            }
+        }
+
+        while(min <= max){
+            mid = (min + max)/2;
+
+            int countGreater = 0;
+            for(int num : nums){
+                if(num >= mid){
+                    countGreater ++;
+                }
+            }
+
+            if(countGreater == mid){
+                return mid;
+            }
+            else if(countGreater < mid){
+                max = mid - 1;
+            }
+            else{
+                min = mid + 1;
+            }
+        }
+
+        return -1;
+    }
+}

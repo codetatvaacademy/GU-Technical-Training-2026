@@ -1,4 +1,5 @@
-package AditiKaushik.DP;
+//509. Fibonacci Number
+
 import java.util.Scanner;
 
 class fibonacciNumber {
@@ -22,3 +23,6 @@ class fibonacciNumber {
         sc.close();
     }
 }
+
+//Time Complexity: O(n)
+//Space Complexity: O(n)

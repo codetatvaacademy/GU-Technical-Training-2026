@@ -1,0 +1,24 @@
+class Solution {
+    public int findKthPositive(int[] arr, int k) {
+        int min = 0;
+        int max = arr.length-1;
+        int mid = 0;
+        int missing = 0;
+
+        while(min <= max){
+            mid = (min+max)/2;
+            missing = arr[mid] - (mid + 1);
+
+            if(missing < k){
+                min = mid + 1;
+            }
+            else{
+                max = mid - 1;
+            }
+        }
+
+        return k+max+1;
+
+
+    }
+}
