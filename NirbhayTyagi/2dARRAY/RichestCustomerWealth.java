@@ -22,7 +22,7 @@ class RichestCustomerWealth{
             int n = sc.nextInt();
             int[][] accounts = new int[m][n];
             for (int i = 0; i < m; i++) {
-                System.out.println("Enter the elements fo account: ");
+                System.out.println("Enter the element of account: ");
                 for (int j = 0; j < n; j++) {
                     accounts[i][j] = sc.nextInt();
                 }
@@ -31,3 +31,9 @@ class RichestCustomerWealth{
         }
     }
 }  
+  
+//time complexity of the function is : O(n*m)
+//space complexity of the function is : O(1)
+
+//time complexity of the whole program is : O(m*n)
+//space complexity of the whole program is : O(m*n)
