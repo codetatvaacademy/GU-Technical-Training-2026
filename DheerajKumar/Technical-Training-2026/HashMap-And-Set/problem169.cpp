@@ -59,6 +59,31 @@ class Solution {
         }
     };
 
+
+    class Solution {
+        public:
+            int majorityElement_MooresVoting(vector<int>& nums) {
+                int assume = -1, count = 0;
+        
+                for(int i = 0; i < nums.size(); i++){
+                    if(assume == -1 && count <= 0){
+                        assume = nums[i];
+                        count++;
+                    }
+                    else if(assume != nums[i]){
+                        count--;
+                        if(count == 0){
+                            assume = -1;
+                        }
+                    }
+                    else{
+                        count++;
+                    }
+                }
+                return assume;
+            }
+        };
+
 int main(){
 
 }
