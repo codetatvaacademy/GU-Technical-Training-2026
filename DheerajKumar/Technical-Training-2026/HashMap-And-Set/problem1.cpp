@@ -58,5 +58,30 @@ class Solution {
     };
 
 int main(){
+    int numebrOfTest;
 
+    cout<<"Enter numebr of test case ->> ";
+    cin>>numebrOfTest;
+
+    for(int i = 0; i < numebrOfTest; i++){
+        vector<int> input;
+        int size;
+        cout<<"ENetr size of input -> ";
+        cin>>size;
+
+        cout<<"Enter array -> ";
+        for(int j = 0; j < size; i++){
+            int number;
+            cin>>number;
+
+            input.push_back(number);
+        }
+
+        int value;
+        cout<<"Enter the targeted sum ->> ";
+        cin>>value;
+
+        Solution Test;
+        Test.twoSum(input, value);
+    }
 }
