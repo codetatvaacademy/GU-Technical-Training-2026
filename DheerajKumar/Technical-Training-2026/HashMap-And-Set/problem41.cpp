@@ -47,5 +47,25 @@ class Solution {
     };
 
 int main(){
+    int testCases;
+    cout<<"Test Cases ->> ";
+    cin>>testCases;
 
+    for(int i = 0; i < testCases; i++){
+        vector<int> nums;
+        int size;
+
+        cout<<"enter size -> ";
+        cin>>size;
+
+        for(int j = 0; i < size; j++){
+            int input;
+            cin>>input;
+
+            nums.push_back(input);
+        }
+
+        Solution Test;
+        cout<<"The missing numebr is -> "<<Test.firstMissingPositive(nums);
+    }
 }
