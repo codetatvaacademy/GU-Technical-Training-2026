@@ -49,5 +49,38 @@ class Solution {
     };
 
 int main(){
+    int numberOfTestCase;
+    cout<<"Enter number of Test case -> ";
+    cin>>numberOfTestCase;
 
+    for(int i = 0; i < numberOfTestCase; i++){
+        vector<int> nums1, nums2;
+        int size1, size2;
+
+        cout<<"\n Enter size of first array -> ";
+        cin>>size1;
+
+        cout<<"\nsize of second Array";
+        cin>>size2;
+
+        cout<<"Enter array 1 -> ";
+        for(int i = 0; i < size1; i++){
+            int input;
+            cin>>input;
+
+            nums1.push_back(input);
+        }
+
+        cout<<"Enetr array 2 ->";
+        for(int i = 0; i < size2; i++){
+            int input;
+            cin>>input;
+
+            nums2.push_back(input);
+        }
+
+        Solution test;
+
+        vector<int> output = test.intersection(nums1, nums2);
+    }
 }
