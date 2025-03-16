@@ -18,6 +18,8 @@ public class PrintingLargestUsingAndOperator {
         else {
             System.out.println("Number 1 is greater");
         }
+        sc.close();
+
 
     }
     

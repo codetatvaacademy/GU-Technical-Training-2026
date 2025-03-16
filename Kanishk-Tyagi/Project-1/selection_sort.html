@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort</title>
+    <link rel="stylesheet" href="selection.css">
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="banner_video_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <h1 class="logo">SortXplorer</h1>
+
+        <!-- Centered Text and Button -->
+        <div class="centered-content">
+            <h1>Selection Sort</h1>
+            <a href="#info-section" class="start-learning-btn">Start Learning</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Selection Sort Algorithm</h1>
+        <p>Selection Sort is a comparison-based sorting algorithm...</p>
+
+        <h2>Code:</h2>
+        <div class="code-container">
+            <pre>
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+void selectionSort(vector&lt;int&gt;&arr) {
+    int n = arr.size();
+    for (int i = 0; i < n - 1; ++i) {
+        int min_idx = i;
+        for (int j = i + 1; j < n; ++j) {
+            if (arr[j] < arr[min_idx]) {
+                min_idx = j; 
+            }
+        }
+        swap(arr[i], arr[min_idx]);
+    }
+}
+int main() {
+    vector&lt;int&gt; arr = {64, 25, 12, 22, 11};
+    selectionSort(arr);
+}
+            </pre>
+        </div>
+
+        <h3>Output</h3>
+        <pre>
+Original vector : 64 25 12 22 11
+Sorted vector : 11 12 22 25 64
+        </pre>
+
+        <h3>Complexity Analysis</h3>
+        <p>Time Complexity: O(n<sup>2</sup>) ...</p>
+    </div>
+
+    <h3>Video Tutorial</h3>
+    <div class="play">
+        <iframe width="1000" height="500" src="https://www.youtube.com/embed/EwjnF7rFLns?si=bdAjPySKSjy1_qJD"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+</body>
+
+</html>

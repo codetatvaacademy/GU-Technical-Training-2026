@@ -11,7 +11,7 @@ public class PrintingNumbersInDescendingOrder {
         System.out.println("Enter number 3:");
         int num3=sc.nextInt();
         Integer[] arr= {num1,num2,num3};
-        Arrays.sort(arr, Collections.reverseOrder());
+        Arrays.sort(arr);
         System.out.println("Numbers in descending order:");
         for(int i=0;i<arr.length;i++){
             System.out.println(arr[i]);

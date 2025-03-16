@@ -1,0 +1,4 @@
+com/sortingvisualizer/SortingVisualizerApplication.class
+com/sortingvisualizer/controller/SortingController.class
+com/sortingvisualizer/service/SortingService.class
+com/sortingvisualizer/model/SortingRequest.class

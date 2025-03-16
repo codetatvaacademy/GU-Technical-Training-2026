@@ -1,0 +1,20 @@
+class Solution:
+    def minOperations(self, nums: List[int], x: int) -> int:
+        totalSum = sum(nums)
+        x = totalSum - x
+        if x < 0:
+            return -1
+        if x == 0:
+            return len(nums)
+        Sum = 0
+        maxwindow = -1
+        start = 0
+        for i in range(len(nums)):
+            Sum += nums[i]
+            while Sum > x:
+                Sum -= nums[start]
+                start += 1
+
+            if Sum == x:
+                maxwindow = max(maxwindow, i - start + 1)
+        return -1 if maxwindow == -1 else len(nums) - maxwindow

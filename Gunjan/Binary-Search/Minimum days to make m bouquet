@@ -1,0 +1,44 @@
+class Solution {
+    bool is_MinimumDayValid(vector<int>& bloomDay, int m, int k, int minimumDays) {
+        int bouquets = 0, flowers = 0;
+
+        for (int i = 0; i < bloomDay.size(); i++) {
+            if (bloomDay[i] <= minimumDays) {
+                flowers++;
+                if (flowers == k) {
+                    bouquets++;
+                    flowers = 0;
+                }
+            } else {
+                flowers = 0;
+            }
+        }
+        return bouquets >= m;
+    }
+
+public:
+    int minDays(vector<int>& bloomDay, int m, int k) {
+        int minimum = INT_MAX, maximum = INT_MIN, minimumDays = 0;
+
+        if((long long)m * (long long)k > bloomDay.size()){
+            return - 1;
+        }
+        
+        for(int i = 0; i < bloomDay.size(); i++){
+            minimum = min(bloomDay[i], minimum);
+            maximum = max(bloomDay[i], maximum);
+        }
+
+        while(minimum <= maximum){
+            minimumDays = (minimum + maximum) / 2;
+            
+            if(is_MinimumDayValid(bloomDay, m, k, minimumDays)){
+                maximum = minimumDays - 1;
+            }else{
+                minimum = minimumDays + 1;
+            }
+        }
+
+        return minimum;
+    }
+}; 

@@ -1,0 +1,24 @@
+.characterstic-container{
+    max-height: 24vh;
+    overflow-y:hidden;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    scrollbar-width: thin;
+}
+
+.characterstic-container::-webkit-scrollbar{
+    width:8px;
+}
+.characterstic-container:hover{
+    overflow-y:scroll;
+    scrollbar-color:rgb(232, 235, 224) white;
+}
+body.dark-mode .characterstic-container {
+    background-color: black; 
+    color: rgba(255, 255, 255, 0.50);
+    border: 1px solid white; 
+}
+body.dark-mode .characterstic-container:hover {
+    scrollbar-color: rgba(255, 255, 255, 0.5) #333333;
+}

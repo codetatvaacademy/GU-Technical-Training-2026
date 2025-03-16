@@ -1,0 +1,43 @@
+h2,
+h3 {
+  color: black;
+}
+p {
+  color: gray;
+}
+
+ul {
+  color: gray;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.introduction-container {
+  max-height: 25vh;
+  overflow-y: hidden;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  scrollbar-width: thin;
+  width: 60%;
+}
+
+.introduction-container:hover {
+  overflow-y: scroll;
+  scrollbar-color: rgb(232, 235, 224) white;
+}
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: white;
+}
+body.dark-mode p,
+body.dark-mode ul {
+  color: lightgray;
+}
+body.dark-mode .introduction-container {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+body.dark-mode .introduction-container:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.5) #333333;
+}

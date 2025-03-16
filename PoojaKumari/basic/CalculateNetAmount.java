@@ -15,6 +15,8 @@ public class CalculateNetAmount {
             netamount=amount;
         }
         System.out.println("Netamount to be paid:"+netamount);
+        sc.close();
+
     }
     
 }

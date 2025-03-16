@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sort Algorithm</title>
+    <link rel="stylesheet" href="selection.css">
+</head>
+
+<body>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <video class="background-video" autoplay loop muted>
+            <source src="banner_video_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+
+        <!-- Centered Content -->
+        <div class="centered-content">
+            <h1>Quick Sort Algorithm</h1>
+            <a href="#" class="start-learning-btn">Start Learning</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Introduction</h2>
+        <p>QuickSort is a sorting algorithm based on the Divide and Conquer technique. It picks an element as a pivot
+            and partitions the given array around the picked pivot by placing the pivot in its correct position in the
+            sorted array.</p>
+
+        <h2>Algorithm Steps</h2>
+        <ul>
+            <li><b>Choose a Pivot:</b> Select an element from the array as the pivot. The choice of pivot can vary
+                (e.g., first element, last element, random element, or median).</li>
+            <li><b>Partition the Array:</b> Rearrange the array around the pivot. After partitioning, all elements
+                smaller than the pivot will be on its left, and all elements greater than the pivot will be on its
+                right. The pivot is then in its correct position, and we obtain the index of the pivot.</li>
+            <li><b>Recursively Call:</b> Recursively apply the same process to the two partitioned sub-arrays (left and
+                right of the pivot).</li>
+            <li>Further divide these two subarrays into further halves, until the atomic (single element) subarray is
+                reached, and further division is not possible.</li>
+            <li>Start combining the elements again using the merge process.</li>
+            <li><b>Base Case:</b> The recursion stops when there is only one element left in the sub-array, as a single
+                element is already sorted.</li>
+        </ul>
+
+        <h2>Quick Sort Code (C++)</h2>
+        <div class="code-container">
+            <pre>
+<code>
+// C++ program to implement Quick Sort
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int partition(vector&lt;int&gt;& arr, int low, int high) {
+    int pivot = arr[high];
+    int i = low - 1;
+
+    for (int j = low; j <= high - 1; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(arr[i], arr[j]);
+        }
+    }
+    swap(arr[i + 1], arr[high]);
+    return i + 1;
+}
+
+void quickSort(vector&lt;int&gt;& arr, int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+
+int main() {
+    vector&lt;int&gt; arr = {10, 7, 8, 9, 1, 5};
+    int n = arr.size();
+    quickSort(arr, 0, n - 1);
+
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
+            </code>
+            </pre>
+        </div>
+
+        <h2>Output</h2>
+        <p><b>Sorted vector :</b> 1 5 7 8 9 10</p>
+
+        <h2>Complexity Analysis</h2>
+        <ul>
+            <li><b>Best Case:</b> Ω(n log n), occurs when the pivot element divides the array into two equal halves.
+            </li>
+            <li><b>Average Case:</b> θ(n log n), occurs when the pivot divides the array into two parts, but not
+                necessarily equal.</li>
+            <li><b>Worst Case:</b> O(n²), occurs when the smallest or largest element is always chosen as the pivot
+                (e.g., sorted arrays).</li>
+            <li><b>Auxiliary Space:</b> O(n), due to the recursive call stack.</li>
+        </ul>
+
+        <!-- Video Tutorial Section -->
+        <h3>Video Tutorial</h3>
+        <div class="play">
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/Vtckgz38QHs?si=vM_VLQC2gS7XK9ht"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+
+</html>

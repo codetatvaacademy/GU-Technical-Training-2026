@@ -1,0 +1,13 @@
+#left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  body.dark-mode #left {
+    --background-color: #333333; 
+    --text-color: rgba(255, 255, 255, 0.87); 
+  }
+  body.dark-mode #left h2, 
+  body.dark-mode #left p {
+  color: var(--text-color);
+}

@@ -51,6 +51,7 @@ public class NumMatrix {
 
         NumMatrix answer=new NumMatrix(matrix);
         System.out.print(answer.sumRegion(row1, col1, row2, col2));
+        sc.close();
         
     }
 

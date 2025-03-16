@@ -1,0 +1,145 @@
+body {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  background: #f8f9fa;
+  color: #333;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1{
+  margin-top: 0.8px;
+  margin-bottom: 8px;
+}
+
+#container {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: nowrap; 
+  gap: 6px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
+.bar {
+  width: 30px;
+  height: 100px; 
+  background: linear-gradient(180deg, #6cb2eb, #4a90e2);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 2px;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.bar:hover {
+  background: linear-gradient(180deg, #83c3f5, #357ec7);
+  transform: scale(1.05);
+}
+
+
+input, select, button {
+  margin:0.5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+
+button {
+  background: linear-gradient(135deg, #4caf50, #3e8e41);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 8px;
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(76, 175, 80, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #45a049, #2e7033);
+  transform: translateY(-2px);
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: white;
+  background: #007bff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+a:hover {
+  background: #0056b3;
+}
+
+
+.dark-mode {
+  background: linear-gradient(135deg, #181818, #222d39);
+  color: #ffffff;
+}
+
+
+.dark-mode #container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.dark-mode .bar {
+  background: linear-gradient(180deg, #ff8c00, #e66a00);
+}
+
+.dark-mode .bar:hover {
+  background: linear-gradient(180deg, #ffa64d, #cc5500);
+}
+
+.dark-mode input, .dark-mode select, .dark-mode button {
+  background-color: #333;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+.dark-mode button {
+  background: linear-gradient(135deg, #555, #333);
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode button:hover {
+  background: linear-gradient(135deg, #666, #444);
+}
+
+.dark-mode a {
+  background: #007bff;
+}
+
+.dark-mode a:hover {
+  background: #0056b3;
+}
+

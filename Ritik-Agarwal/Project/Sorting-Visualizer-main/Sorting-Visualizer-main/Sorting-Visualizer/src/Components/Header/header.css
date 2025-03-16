@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #1A4870;
+    color: rgb(26, 25, 25);
+    padding: 20px;
+    position: relative;
+    height: 10vh;
+    transition: background-color 0.3s ease;
+    
+  }
+  header h1 {
+    font-size: 35px;
+    color: beige;
+    font-family:'Times New Roman', Times, serif;
+  }
+  header button{
+    position: absolute;
+  }
+  body.dark-mode header {
+    background-color: #2A3335;
+    color: white;
+}
