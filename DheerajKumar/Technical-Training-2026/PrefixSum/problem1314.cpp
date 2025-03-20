@@ -1,5 +1,9 @@
 /*1314. Matrix Block Sum
-
+Solved
+Medium
+Topics
+Companies
+Hint
 Given a m x n matrix mat and an integer k, return a matrix answer where each answer[i][j] is the sum of all elements mat[r][c] for:
 
 i - k <= r <= i + k,
@@ -44,27 +48,38 @@ class Solution {
                 }
             }
     
-            for(auto row : mat){
-                for(auto column : row){
-                    cout<<column <<", ";
+            vector<vector<int>> outPut (mat.size(), vector<int>(mat[0].size(), 0));
+    
+            int rowSize = mat.size(), columnSize = mat[0].size();
+            for(int i = 0; i < mat.size(); i++){
+                for(int j = 0; j < mat[0].size(); j++){
+    
+                    int topRow = max(0, i - k), lowRow = min((rowSize - 1), i + k),
+                    leftColumn = max(0, j - k), rightColumn = min((columnSize - 1), j + k);
+    
+                    outPut[i][j] = prefixSum[lowRow][rightColumn];
+                    if(topRow > 0) outPut[i][j] -= prefixSum[topRow - 1][rightColumn];
+                    if(leftColumn > 0) outPut[i][j] -= prefixSum[lowRow][leftColumn - 1];
+                    if(topRow > 0 && leftColumn > 0) outPut[i][j] += prefixSum[topRow - 1][leftColumn - 1];
                 }
-                cout<<"|\n|";
             }
     
-            cout<<"\n\n";
-    
-            cout<<"|";
-            for(auto row : prefixSum){
-                for(auto column : row){
-                    cout<<column <<", ";
-                }
-                cout<<"|\n|";
-            }
-    
-            return {{}};
+            return outPut;
         }
     };
 
-int main(){
+    int main(){
+        vector<vector<int>> input = {{1,2,3},{4,5,6},{7,8,9}}, output;
+        int k = 1;
 
-}
+        Solution Test;
+        output = Test.matrixBlockSum(input, k);
+        for(auto row : output){
+            for(auto column : row){
+                cout<<column<<", ";
+            }
+            cout<<"\n";
+        }
+
+        return 0;
+    }
