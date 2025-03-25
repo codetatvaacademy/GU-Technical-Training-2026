@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e293b, #111827);
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background: black;
+    font-size: 24px;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+button {
+    background: cyan;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+}
+
+#sorting-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 60vh;
+    padding: 20px;
+}
+
+.bar {
+    background: cyan;
+    width: 20px;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+.bar.active {
+    background: red;
+}
+
+/*
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e293b, #111827);
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background: black;
+    font-size: 24px;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+button {
+    background: cyan;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+}
+
+#sorting-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 60vh;
+    padding: 20px;
+}
+
+.bar {
+    background: cyan;
+    width: 20px; 
+    margin: 4px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+}
+
+.bar-label {
+    position: absolute;
+    bottom: -20px;
+    color: white;
+    font-size: 12px;
+}
+*/
