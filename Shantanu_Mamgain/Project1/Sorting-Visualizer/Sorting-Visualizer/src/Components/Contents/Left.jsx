@@ -5,7 +5,6 @@ import { useState } from "react";
 import "./Left.css";
 import { selectData } from "./ImageMenu.js";
 import { returnSortingName } from "./AlgoMenu.js";
-import { useEffect } from "react";
 
 function Left() {
     const [isToggled, setIsToggled] = useState(false);
@@ -49,7 +48,6 @@ function Left() {
         const newSort = returnSortingName();
         setTitle(newSort);
         setSort(newSort);
-        // setJoinedString(joinedString);
         data = selectData(newSort);
         setSource(data[0]);
         setDefinition(data[1]);
@@ -66,7 +64,7 @@ function Left() {
 
   return (
     <div id="left">
-      <FirstSection IntroData={definition} ImageSource={source} Name={sort} />
+      <FirstSection IntroData={definition} ImageSource={source} Name={sort===""?"Sorting Algorithm":sort} />
       <Characterstics
         BestCase={bestCase}
         AverageCase={averageCase}
@@ -74,10 +72,10 @@ function Left() {
         SpaceComplexity={spaceComplexity}
         Stability={stablity}
         InPlace={in_place}
-        Name={sort}
+        Name={sort===""?"Sorting Algorithm":sort}
 
       />
-      <Algorithm Algorithm={algorithms.join('\n')} Title={title}/>
+      <Algorithm Algorithm={algorithms.join('\n')} Title={title===""?"Vizualizer":title}/>
       <button onClick={RefreshData}>Refresh</button>
     </div>
   );

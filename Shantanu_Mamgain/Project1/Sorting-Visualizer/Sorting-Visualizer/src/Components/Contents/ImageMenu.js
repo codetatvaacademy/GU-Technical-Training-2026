@@ -23,7 +23,7 @@ let quicksort=["1. Choose a Pivot: Select a pivot element from the array (this c
 let selectionSort=["1. Find the Minimum Element: Start from the first element and search for the smallest element in the entire array.", "2. Swap with the First Element: Once the minimum element is found, swap it with the first element of the array.", "3. Move to the Next Position: Move to the second element and repeat the process by finding the smallest element in the remaining unsorted portion of the array.", "4. Repeat for All Elements: Continue this process, selecting the next smallest element and swapping it into its correct position, moving one position to the right after each iteration.", "5. Terminate When Sorted: Repeat until the entire array is sorted. When no unsorted elements remain, the array is fully sorted."]
 let insertionsort=["1. Start with the Second Element: Begin by considering the second element of the array as the key and compare it with the first element.", "2. Compare and Shift: Compare the key with elements before it and shift each larger element one position to the right until you find the correct position for the key.", "3. Insert the Key: Place the key in its correct position in the sorted portion of the array (elements to the left).", "4. Move to the Next Element: Move to the next unsorted element (the next key) and repeat the process of comparing and inserting it into the sorted portion of the array.", "5. Repeat Until Sorted: Continue this process for all remaining elements until the entire array is sorted."]
 let countingSort=["1. Find the Range of Elements: Determine the maximum and minimum elements in the input array to establish the range of the input data.", "2. Create a Count Array: Create a count array of size equal to the range of input elements. Initialize all values in the count array to zero.", "3. Count the Occurrences: Traverse the input array and update the count array by incrementing the value at the index corresponding to each element value in the input array.", "4. Accumulate the Count: Modify the count array such that each element at each index stores the sum of previous counts, which gives the position of each element in the sorted output array.", "5. Build the Output Array: Traverse the input array in reverse order and place each element in its correct sorted position in the output array using the count array, maintaining stability. Finally, copy the sorted elements back into the original array."]
-
+let sorting = ["1. Select the size of array.", "2. Select desired Sorting Algorithm.", "3. Click on Submit button to visualize sorting.","4. Pause Button: You can use this button to pause the sorting at any point and understand it.", "5. Reset Button: You can use this button to reset the sorted data to its default format.", "6. Start Button: You can use this button to start sorting the data to again after resetting."];
 export function selectData (sort){
     let dataArr = [];
     switch(sort){
@@ -46,7 +46,7 @@ export function selectData (sort){
            dataArr= [imageArr[6], definitionArr[6],bestCase[6],averageCase[6],worstCase[6],spaceComplexity[6], stability[6],inplace[6],countingSort]
            return dataArr;
         default:
-            dataArr=[imageArr[0], definitionArr[0],bestCase[0],averageCase[0],worstCase[0],spaceComplexity[0], stability[0],inplace[0]]
+            dataArr=[imageArr[0], definitionArr[0],bestCase[0],averageCase[0],worstCase[0],spaceComplexity[0], stability[0],inplace[0], sorting]
             return dataArr;     
     }
 }
