@@ -19,7 +19,6 @@ function UpperRight() {
   const toggleComponent = (e) => {
     e.preventDefault();
     if (!isToggled) {
-      
       const form = e.currentTarget;
       const data = new FormData(form);
       const arraysize = parseInt(data.get("ArraySize"),10);
@@ -27,7 +26,6 @@ function UpperRight() {
       setFormData({ arraySize: arraysize, SortingAlgorithm });
       const newArray = generateArray(arraysize);
       setArray(newArray);
-      // setArray(() => generateArray(arraysize));
       getSortingName(SortingAlgorithm);
     }
     else{
