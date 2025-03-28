@@ -48,3 +48,9 @@ class FourSum{
         System.out.println("The number of tuples: " + fourSumCount(nums1, nums2, nums3, nums4));
     }
 }
+
+//time complexity of the function is: O(n^2)
+//space complexity of the function is: O(n^2)
+
+//time complexity of the function is: O(n^2)
+//space complexity of the function is: O(n^2)

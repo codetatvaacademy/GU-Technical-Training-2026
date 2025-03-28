@@ -3,17 +3,26 @@ import java.util.Scanner;
 class TrappingRainWater{
     public static int trap(int[] height) {
         int n = height.length;
+        if (n == 0) return 0;         
+        int left = 0, right = n - 1;
+        int leftMax = 0, rightMax = 0;
         int res = 0;
-        for (int i = 1; i < n - 1; i++) {
-            int left = height[i];
-            for (int j = 0; j < i; j++) {
-                left = Math.max(left, height[j]);
+        while (left <= right) {
+            if (height[left] <= height[right]) {
+                if (height[left] >= leftMax) {
+                    leftMax = height[left];  
+                } else {
+                    res += leftMax - height[left];  
+                }
+                left++;
+            } else {
+                if (height[right] >= rightMax) {
+                    rightMax = height[right];  
+                } else {
+                    res += rightMax - height[right];  
+                }
+                right--;
             }
-            int right = height[i];
-            for (int j = i + 1; j < n; j++) {
-                right = Math.max(right, height[j]);
-            }
-            res += Math.min(left, right) - height[i];
         }
         return res;
     }
@@ -30,3 +39,9 @@ class TrappingRainWater{
         System.out.println("The resultant array is " + trap(height));
     }
 }
+
+//time complexity of the function is : O(n)
+//space complexity of the function is : O(1)
+
+//time complexity of the whole  program is : O(n) + O(n)
+//space complexity of the whole program is : O(n)

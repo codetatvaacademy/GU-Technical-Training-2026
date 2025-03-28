@@ -30,3 +30,9 @@ class ContainsDuplicateII{
         System.out.println("The result is: " + containsNearbyDuplicate(nums, k));
     }
 }
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(n)
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(n)

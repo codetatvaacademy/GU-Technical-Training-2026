@@ -29,3 +29,9 @@ class SubarraySumsDivisiblebyK{
         System.out.println("The resultant array is: " + subarraysDivByK(nums, k));
     }
 }
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(k)
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(n + k)

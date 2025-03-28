@@ -42,3 +42,9 @@ class IntersectionofTwoArrays{
         System.out.println("The resultant array is: " + Arrays.toString(intersection(nums1, nums2)));
     }
 }
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(n)
+
+//time complexity of the whole program is: O(n)
+//space complexity of the whole program is: O(n)

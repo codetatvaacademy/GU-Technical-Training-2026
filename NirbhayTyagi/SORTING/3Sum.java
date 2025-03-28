@@ -45,3 +45,9 @@ class ThreeSum{
             System.out.println("the triplets are:" + threeSum(nums));
     }
 }
+
+//Time complexity of the function is : O(nlogn)
+//space complexity of the function is : O(n)
+
+//Time complexity of the function is : O(nlogn)
+//space complexity of the function is : O(n)
