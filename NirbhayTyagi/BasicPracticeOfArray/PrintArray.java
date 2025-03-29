@@ -18,3 +18,5 @@ class PrintArray {
         }
     }
 }
+
+//time complexity O(n)
