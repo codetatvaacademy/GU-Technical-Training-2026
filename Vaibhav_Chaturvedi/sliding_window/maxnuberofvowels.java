@@ -1,3 +1,5 @@
+package sliding_window;
+
 class maxnuberofvowels {
     public int maxVowels(String s, int k) {
       char ch[]=s.toCharArray();

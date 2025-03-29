@@ -1,4 +1,4 @@
-
+package sliding_window;
 import java.util.*;
 public class maxerasure  { 
     public int maximumUniqueSubarray(int[] nums) {
