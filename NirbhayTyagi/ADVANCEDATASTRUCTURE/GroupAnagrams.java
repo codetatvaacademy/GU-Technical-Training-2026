@@ -34,3 +34,9 @@ class GroupAnagrams{
         System.out.println("The resultant array is: " + groupAnagrams(strs));
     }
 }
+
+//time complexity of the function is: O(n⋅mlogm)
+//space complexity of the function is: O(n⋅m)
+
+//time complexity of the function is: O(n⋅mlogm)
+//space complexity of the function is: O(n⋅m)

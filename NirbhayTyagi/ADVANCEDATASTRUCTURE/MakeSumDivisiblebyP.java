@@ -49,3 +49,9 @@ class MakeSumDivisiblebyP{
         System.out.println("The resultant array is: " + minSubarray(nums, p));
     }
 }
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(1)
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(n)

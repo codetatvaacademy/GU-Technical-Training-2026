@@ -34,3 +34,9 @@ class MinimumIncrementtoMakeArrayUnique{
         System.out.println("Minimum numbers of moves are :" + minIncrementForUnique(nums));
     }
 }
+
+//time complexity of the function is : O(maxElement + n)
+//space complexity of the function is : O(maxElement + n)
+
+//time complexity of the whole program  is : O(maxElement + n)
+//space complexity of the  whole program is : O(maxElement + n)

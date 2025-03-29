@@ -33,3 +33,9 @@ class MergeSortedArray{
         }
     }
 }
+
+//time complexity of the function is : O((m+n)log(m+n))
+//space complexity of the function is : O(1)
+
+//time complexity of the function is : O((m+n)log(m+n))
+//space complexity of the function is : O(m + n)

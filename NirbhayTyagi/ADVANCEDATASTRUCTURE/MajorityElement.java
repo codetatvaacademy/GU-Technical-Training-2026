@@ -31,3 +31,9 @@ class MajorityElement{
         System.out.println("The resultant array is: " + majorityElement(nums));
     }
 }
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(1)
+
+//time complexity of the whole program is: O(n)
+//space complexity of the whole program is: O(n)

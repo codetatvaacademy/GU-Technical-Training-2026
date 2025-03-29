@@ -30,3 +30,9 @@ class TwoSum{
         System.out.println("The resultant array is: " + Arrays.toString(twoSum(nums, target)));
     }
 }
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(n)
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(n)

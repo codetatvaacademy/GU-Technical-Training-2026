@@ -31,6 +31,12 @@ class HIndex{
         for(int i = 0; i < n; i++){
             citations[i] = sc.nextInt();            
         }
-        System.out.println("the researcher's index is:" + hIndex(citations));
+        System.out.println("the researcher's index5 is:" + hIndex(citations));
     }
 }
+
+//time complexity of the function is : O(n)
+//space complexity of the function is : O(n)
+
+//time complexity of the function is : O(n) 
+//space complexity of the function is : O(n)

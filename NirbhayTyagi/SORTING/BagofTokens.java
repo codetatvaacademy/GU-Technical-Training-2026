@@ -43,3 +43,9 @@ class BagofTokens{
         System.out.println("the maximum possible score is:" + bagOfTokensScore(tokens, power));
     }
 }
+
+//time complexity of the function is: O(nlogn)
+//space complexity of the function is: O(1)
+
+//time complexity of the whole program is: O(nlogn)
+//space complexity of the whole program is: O(n)

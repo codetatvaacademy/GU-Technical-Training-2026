@@ -36,3 +36,9 @@ class RabbitsinForest{
         System.out.println("The minimum number of rabbits in forest: " + numRabbits(answers));
     }
 }
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(n)
+
+//time complexity of the function is: O(n)
+//space complexity of the function is: O(n)

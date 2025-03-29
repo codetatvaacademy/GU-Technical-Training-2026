@@ -42,3 +42,9 @@ class SumClosest{
         System.out.println("the maximum possible score is:" + threeSumClosest(nums, target));
     }
 }
+
+//time complexity of the function is : O(nlogn)
+//space complexity of the function is : O(1)
+
+//time complexity of the function is : O(nlogn)
+//space complexity of the function is : O(n)

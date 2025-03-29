@@ -33,6 +33,6 @@ class customSortString{
         String order = sc.nextLine();
         System.out.println("Enter the second string");
         String s = sc.nextLine();
-        System.out.println("The output string will be : " + customSortString(order, s));
+        System.out.println("The output string will be : c" + customSortString(order, s));
     }
 }
