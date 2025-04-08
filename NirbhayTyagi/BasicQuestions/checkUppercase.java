@@ -1,7 +1,5 @@
 
 import java.util.Scanner;
-
-
  class checkUppercase{
     public static String checkCharacter(char ch){
         if(Character.isUpperCase(ch)){
